@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #75E2FF;
+    background-color: #EAEBED;
 }
 
 /* Header styles */
@@ -17,7 +17,7 @@ header {
     display: flex;
     align-items: right;
     justify-content: space-between;
-    background-color: #EAEBED;
+    background-color: #75E2FF;
     color: #fff;
     padding: 20px 0;
 }
