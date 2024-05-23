@@ -18,7 +18,7 @@ header {
     align-items: right;
     justify-content: space-between;
     background-color: #75E2FF;
-    color: #fff;
+    color: black;
     padding: 20px 0;
 }
 
@@ -116,6 +116,7 @@ footer {
 
 .footer-logo img {
     max-width: 100px;
+    align: left;
 }
 
 .footer-social-media a {
@@ -124,6 +125,7 @@ footer {
 
 .footer-social-media img {
     max-width: 30px;
+    align: right;
 }
 
 /* Media queries for responsiveness */
