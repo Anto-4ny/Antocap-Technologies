@@ -9,15 +9,15 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f8f8f8;
+    background-color: #75E2FF;
 }
 
 /* Header styles */
 header {
     display: flex;
-    align-items: center;
+    align-items: right;
     justify-content: space-between;
-    background-color: #333;
+    background-color: #EAEBED;
     color: #fff;
     padding: 20px 0;
 }
