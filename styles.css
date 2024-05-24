@@ -9,16 +9,16 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #EAEBED;
+    background-color: transparent;
 }
 
 /* Header styles */
 header {
-    display: flex;
+    display: relative;
     align-items: right;
     justify-content: space-between;
     background-color: #75E2FF;
-    color: black;
+    color: white;
     padding: 20px 0;
 }
 
@@ -100,7 +100,11 @@ nav ul li a:hover {
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
-    border-radius: 8px; /* Add border radius for rounded corners */
+    border-radius: 10px;/* Add border radius for rounded corners */
+      border-radius-top: 10px;
+      border-radius-bottom: 10px;
+      border-radius-right: 10px;
+      border-radius-left: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
     transition: all 0.3s ease; /* Add transition for smooth hover effect */
 }
