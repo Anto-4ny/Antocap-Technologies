@@ -62,7 +62,7 @@ nav ul li a:hover {
     height: 100%;
     background-size: cover;
     background-position: center;
-    display: none;
+    display: flex;
 }
 
 .slide-content {
