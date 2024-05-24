@@ -88,16 +88,43 @@ nav ul li a:hover {
     text-align: center;
 }
 
+.feature-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between feature boxes */
+}
+
 .feature-box {
+    flex: 1 0 calc(25% - 20px); /* Adjust the width of each feature box to fit four boxes in a row with a gap */
     margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* Add border radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+    transition: all 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.feature-box:hover {
+    transform: translateY(-5px); /* Move the box up slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
 }
 
 .feature-box img {
     max-width: 100%;
+    transition: all 0.3s ease; /* Add transition for smooth hover effect on image */
+}
+
+.feature-box:hover img {
+    transform: scale(1.05); /* Increase image size on hover */
+}
+
+.feature-box-content {
+    padding: 20px;
 }
 
 .feature-box h3 {
-    margin-top: 20px;
+    margin-top: 0;
     font-size: 24px;
 }
 
@@ -105,6 +132,7 @@ nav ul li a:hover {
     font-size: 16px;
     color: #666;
 }
+
 
 /* Footer styles */
 footer {
