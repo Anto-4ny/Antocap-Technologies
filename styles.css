@@ -14,7 +14,7 @@ body {
 
 /* Header styles */
 header {
-    display: relative;
+    display: flex;
     align-items: right;
     justify-content: space-between;
     background-color: #75E2FF;
@@ -115,7 +115,7 @@ nav ul li a:hover {
 }
 
 .feature-box img {
-    max-width: 50%;
+    max-width: 100%;
     transition: all 0.3s ease; /* Add transition for smooth hover effect on image */
 }
 
