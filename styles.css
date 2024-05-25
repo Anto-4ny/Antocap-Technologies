@@ -17,7 +17,7 @@ header {
     display: flex;
     align-items: right;
     justify-content: space-between;
-    background-color: white;
+    background-color: transparent;
     color: black;
     padding: 20px 0;
 }
@@ -38,12 +38,12 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: black;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: #ffd700;
+    color: black;
 }
 
 .social-media a {
@@ -140,7 +140,7 @@ nav ul li a:hover {
 
 /* Footer styles */
 footer {
-    background-color: #75E2FF;
+    background-color: transparent;
     color: black;
     padding: 20px 0;
     text-align: left;
