@@ -19,3 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setInterval(nextSlide, 6000); // Change slide every 3 seconds
 });
+
+// Navigation toggle
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+
+    menuIcon.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+    });
+});
