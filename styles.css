@@ -1,16 +1,124 @@
-/* Resetting default margin and padding */
+/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: transparent;
 }
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+}
+
+.logo img {
+    height: 50px; /* Adjust size as needed */
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Navigation styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+    position: relative;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-links ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #444;
+    padding: 1rem;
+    list-style: none;
+}
+
+.nav-links li:hover ul {
+    display: block;
+}
+
+.nav-links ul li {
+    margin: 0;
+}
+
+.nav-links ul a {
+    font-size: 0.9rem;
+}
+
+/* Social media icons */
+.social-media a img {
+    height: 24px; /* Adjust size as needed */
+    margin-left: 10px;
+}
+
+/* Hide menu icon on desktop */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #333;
+        z-index: 1;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .nav-links ul {
+        position: static;
+        background: none;
+        padding: 0;
+    }
+
+    .nav-links ul li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
 
 /* Header styles */
 header {
@@ -44,10 +152,6 @@ nav ul li a {
 
 nav ul li a:hover {
     color: black;
-}
-
-.social-media a {
-    margin-left: 10px;
 }
 
 /* Slider styles */
