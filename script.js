@@ -27,3 +27,26 @@ document.addEventListener("DOMContentLoaded", () => {
         navLinks.classList.toggle('active');
     });
 });
+
+//basic, advanced and premium services 
+function orderService(serviceType) {
+    let message;
+    let email;
+    switch(serviceType) {
+        case 'basic':
+            message = "I would like to order the Basic Service.";
+            email = "mailto:your-email@example.com?subject=Basic Service Order&body=" + encodeURIComponent(message);
+            break;
+        case 'advanced':
+            message = "I would like to order the Advanced Service.";
+            email = "mailto:your-email@example.com?subject=Advanced Service Order&body=" + encodeURIComponent(message);
+            break;
+        case 'premium':
+            message = "I would like to order the Premium Service.";
+            email = "mailto:your-email@example.com?subject=Premium Service Order&body=" + encodeURIComponent(message);
+            break;
+        default:
+            return;
+    }
+    window.open(email, '_blank');
+}
