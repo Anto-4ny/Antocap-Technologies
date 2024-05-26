@@ -34,6 +34,7 @@ nav {
 .nav-links {
     list-style: none;
     display: flex;
+    background:  #75E2FF;
 }
 
 .nav-links li {
@@ -52,7 +53,7 @@ nav {
     position: absolute;
     top: 100%;
     left: 0;
-    background: blue;
+    background: #75E2FF;
     padding: 1rem;
     list-style: none;
 }
@@ -91,18 +92,18 @@ nav {
         position: absolute;
         top: 60px;
         left: 0;
-        background: white;
+        background: #75E2FF;
         z-index: 1;
     }
 
     .nav-links li {
-        text-align: center;
+        text-align: left;
         margin: 1rem 0;
     }
 
     .nav-links ul {
         position: static;
-        background: blue;
+        background: #75E2FF;
         padding: 0;
     }
 
