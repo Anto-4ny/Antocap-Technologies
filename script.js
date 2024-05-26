@@ -17,8 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
         showSlide(currentSlide);
     }
 
-    setInterval(nextSlide,6000); // Change slide every 3 seconds
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
 });
+
 
 // Navigation toggle
     const menuIcon = document.getElementById('menu-icon');
