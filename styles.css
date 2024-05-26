@@ -152,6 +152,44 @@ nav {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+}
+
+.service-box {
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+#basic-service {
+    background-color: #2196f3; /* Blue */
+}
+
+#advanced-service {
+    background-color: #4caf50; /* Green */
+}
+
+#premium-service {
+    background-color: #ff9800; /* Orange */
+}
+
+.service-box h2 {
+    margin-top: 0;
+}
+
+.service-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.service-box li {
+    margin: 5px 0;
+}
+
 /* Features section styles */
 .features {
     padding: 50px 0;
