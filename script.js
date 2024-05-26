@@ -34,16 +34,16 @@ function orderService(serviceType) {
     let email;
     switch(serviceType) {
         case 'basic':
-            message = "I would like to order the Basic Service.";
-            email = "mailto:your-email@example.com?subject=Basic Service Order&body=" + encodeURIComponent(message);
+            message = "I would like to order the Basic Website.";
+            email = "mailto:antocaptechnologies@gmail.com?subject=Basic Website Order&body=" + encodeURIComponent(message);
             break;
         case 'advanced':
-            message = "I would like to order the Advanced Service.";
-            email = "mailto:your-email@example.com?subject=Advanced Service Order&body=" + encodeURIComponent(message);
+            message = "I would like to order the Advanced Website.";
+            email = "mailto:antocaptechnologies@gmail.com?subject=Advanced Website Order&body=" + encodeURIComponent(message);
             break;
         case 'premium':
-            message = "I would like to order the Premium Service.";
-            email = "mailto:your-email@example.com?subject=Premium Service Order&body=" + encodeURIComponent(message);
+            message = "I would like to order the Premium Website.";
+            email = "mailto:antocaptechnologies@gmail.com?subject=Premium Website Order&body=" + encodeURIComponent(message);
             break;
         default:
             return;
