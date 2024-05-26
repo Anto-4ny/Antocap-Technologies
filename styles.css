@@ -91,7 +91,7 @@ nav {
         position: absolute;
         top: 60px;
         left: 0;
-        background: transparent;
+        background: white;
         z-index: 1;
     }
 
@@ -102,7 +102,7 @@ nav {
 
     .nav-links ul {
         position: static;
-        background: none;
+        background: white;
         padding: 0;
     }
 
