@@ -209,10 +209,10 @@ nav {
 
 /* Footer styles */
 footer {
-    background-color: transparent;
+    background-color: navy-blue;
     color: black;
     padding: 20px 0;
-    text-align: left;
+    text-align: center;
 }
 
 .footer-logo img {
@@ -226,7 +226,7 @@ footer {
 
 .footer-social-media img {
     max-width: 30px;
-    align: right;
+    align: center;
 }
 
 /* Media queries for responsiveness */
