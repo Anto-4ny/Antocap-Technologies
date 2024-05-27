@@ -163,9 +163,10 @@ nav {
 
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;  /* Arrange items horizontally */
     gap: 20px;
-    width: 60%;
+    width: 100%;          /* Set container width to 100% */
+    justify-content: center; /* Center the items horizontally */
 }
 
 .service-box {
@@ -174,12 +175,13 @@ nav {
     color: #fff;
     cursor: pointer;
     transition: box-shadow 0.3s ease;
+    height: 300px;        /* Increase the height of the service boxes */
+    flex: 1;              /* Allow the boxes to grow and fill the available space */
 }
 
 .service-box:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 #basic-service {
     background-color: #2196f3; /* Blue */
 }
