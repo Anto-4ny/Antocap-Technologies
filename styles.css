@@ -153,6 +153,14 @@ nav {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+
+    .section {
+     text-align: center; 
+     margin-left: 10px;
+     margin-right: 10px;
+     margin-bottom: 30px
+    }
+
 .container {
     display: flex;
     flex-direction: column;
