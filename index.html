@@ -57,7 +57,16 @@
         Explore the future of the web with us – where every click sparks inspiration, and every interaction tells a unique story. 
         Ready to elevate your online presence? Let's redefine possibilities together.</p>
 </div>
+    <div class="service-box" onclick="showPopup('basic')">Basic Service</div>
+    <div class="service-box" onclick="showPopup('advanced')">Advanced Service</div>
+    <div class="service-box" onclick="showPopup('premium')">Premium Service</div>
 
+    <div id="overlay" onclick="hidePopup()"></div>
+    <div id="popup">
+        <p id="popupMessage"></p>
+        <button onclick="order('email')">Order via Email</button>
+        <button onclick="order('whatsapp')">Order via WhatsApp</button>
+    </div>
 
 <div class="container">
         <div class="service-box" id="basic-service" onclick="orderService('basic')">
