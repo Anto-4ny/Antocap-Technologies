@@ -181,8 +181,10 @@ nav {
     justify-content: center;
 }
 
-.service-box:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+.service-box:hover,
+.service-box:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Black shadow on hover or focus */
 }
 
 #basic-service {
