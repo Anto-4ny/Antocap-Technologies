@@ -34,7 +34,7 @@ nav {
 .nav-links {
     list-style: none;
     display: flex;
-    background:  #75E2FF;
+    background: transparent;
 }
 
 .nav-links li {
@@ -54,7 +54,7 @@ nav {
     top: 100%;
     left: 0;
     background: #75E2FF;
-    padding: 1rem;
+    padding: 3rem;
     list-style: none;
 }
 
@@ -67,7 +67,7 @@ nav {
 }
 
 .nav-links ul a {
-    font-size: 0.9rem;
+    font-size: 2rem;
 }
 
 /* Social media icons */
