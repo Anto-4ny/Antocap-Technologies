@@ -178,13 +178,13 @@ nav {
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center; /* Center items horizontally */
 }
-
 
 .service-box:hover,
 .service-box:focus {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Black shadow on hover or focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 #basic-service {
@@ -205,26 +205,16 @@ nav {
 
 .service-box ul {
     list-style-type: none;
-    padding-left: 3px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column; /* Arrange list items vertically */
+    align-items: center; /* Center list items horizontally */
 }
 
 .service-box li {
-    margin: 5px 0;
+    margin: 5px 0; /* Adjusted */
 }
 
-
-/* Features section styles */
-.features {
-    padding: 50px 0;
-    text-align: left;
-}
-
-.feature-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* Adjust the gap between feature boxes */
-}
 
 .feature-box {
     flex: 1 0 calc(25% - 20px); /* Adjust the width of each feature box to fit four boxes in a row with a gap */
