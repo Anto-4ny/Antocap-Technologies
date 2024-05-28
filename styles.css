@@ -165,6 +165,10 @@ nav {
     display: flex;
     gap: 20px;
     justify-content: center;
+    background-image: url('your-image-url.jpg'); /* Replace 'your-image-url.jpg' with the URL of your background image */
+    background-size: cover; /* Ensure the background image covers the entire container */
+    background-position: center; /* Center the background image */
+    padding: 20px; /* Add padding to separate the background from the boxes */
 }
 
 .service-box {
@@ -216,18 +220,8 @@ nav {
 }
 
 
-.feature-box {
-    flex: 1 0 calc(25% - 20px); /* Adjust the width of each feature box to fit four boxes in a row with a gap */
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;/* Add border radius for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
-    transition: all 0.3s ease; /* Add transition for smooth hover effect */
-}
-
 .feature-box:hover {
-    transform: translateY(-5px); /* Move the box up slightly on hover */
+    transform: translateY(-10px); /* Move the box up slightly on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
 }
 
