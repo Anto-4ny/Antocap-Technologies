@@ -58,16 +58,7 @@
         Ready to elevate your online presence? Let's redefine possibilities together.</p>
 </div>
     <div class="service-box" onclick="showPopup('basic')">Basic Service</div>
-    <div class="service-box" onclick="showPopup('advanced')">Advanced Service</div>
-    <div class="service-box" onclick="showPopup('premium')">Premium Service</div>
-
-    <div id="overlay" onclick="hidePopup()"></div>
-    <div id="popup">
-        <p id="popupMessage"></p>
-        <button onclick="order('email')">Order via Email</button>
-        <button onclick="order('whatsapp')">Order via WhatsApp</button>
-    </div>
-
+    
 <div class="container">
         <div class="service-box" id="basic-service" onclick="orderService('basic')">
             <h2>Basic Website Development</h2>
@@ -77,8 +68,9 @@
                 <li>Basic feature 2</li>
                 <li>Basic feature 3</li>
             </ul>
-        </div>
-        <div class="service-box" id="advanced-service" onclick="orderService('advanced')">
+            </div>
+    <div class="service-box" onclick="showPopup('advanced')">Advanced Service</div>
+      <div class="service-box" id="advanced-service" onclick="orderService('advanced')">
             <h2>Advanced Website Development</h2>
             <ul>
                 <li>Price: $100</li>
@@ -87,7 +79,8 @@
                 <li>Advanced feature 3</li>
             </ul>
         </div>
-        <div class="service-box" id="premium-service" onclick="orderService('premium')">
+    <div class="service-box" onclick="showPopup('premium')">Premium Service</div>
+      <div class="service-box" id="premium-service" onclick="orderService('premium')">
             <h2>Premium Website Development</h2>
             <ul>
                 <li>Price: $150</li>
@@ -97,6 +90,12 @@
             </ul>
         </div>
 </div>
+    <div id="overlay" onclick="hidePopup()"></div>
+    <div id="popup">
+        <p id="popupMessage"></p>
+        <button onclick="order('email')">Order via Email</button>
+        <button onclick="order('whatsapp')">Order via WhatsApp</button>
+    </div>
      
 </div>
     <div class="social-media">
