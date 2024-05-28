@@ -162,11 +162,10 @@ nav {
     }
 
 .container {
-    display: inline-block;
-    flex-direction: row;  /* Arrange items horizontally */
+    display: flex;            /* Change to flex container */
+    flex-direction: row;      /* Arrange items horizontally */
     gap: 20px;
-    width: 30%;          /* Set container width to 100% */
-    justify-content: center; /* Center the items horizontally */
+    justify-content: center;  /* Center the items horizontally */
 }
 
 .service-box {
@@ -175,13 +174,18 @@ nav {
     color: #fff;
     cursor: pointer;
     transition: box-shadow 0.3s ease;
-    height: 300px;        /* Increase the height of the service boxes */
-    flex: 0;              /* Allow the boxes to grow and fill the available space */
+    min-width: 200px;         /* Set a minimum width for the boxes */
+    height: 350px;            /* Increase the height of the service boxes */
+    flex: 0 0 auto;           /* Allow the boxes to grow and shrink */
+    display: flex;            /* Allow the boxes' content to be in lines */
+    flex-direction: column;   /* Arrange content vertically within boxes */
+    justify-content: center;  /* Center content vertically */
 }
 
 .service-box:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 #basic-service {
     background-color: #2196f3; /* Blue */
 }
@@ -206,6 +210,7 @@ nav {
 .service-box li {
     margin: 5px 0;
 }
+
 
 /* Features section styles */
 .features {
