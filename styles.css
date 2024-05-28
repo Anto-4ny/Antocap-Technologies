@@ -165,7 +165,7 @@ nav {
     display: inline-block;
     flex-direction: row;  /* Arrange items horizontally */
     gap: 20px;
-    width: 100%;          /* Set container width to 100% */
+    width: 10%;          /* Set container width to 100% */
     justify-content: center; /* Center the items horizontally */
 }
 
@@ -176,7 +176,7 @@ nav {
     cursor: pointer;
     transition: box-shadow 0.3s ease;
     height: 300px;        /* Increase the height of the service boxes */
-    flex: 1;              /* Allow the boxes to grow and fill the available space */
+    flex: 0;              /* Allow the boxes to grow and fill the available space */
 
     #popup {
             display: none;
