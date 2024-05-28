@@ -28,30 +28,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-function showPopup(serviceType) {
+function order(serviceType) {
     let message;
-    let serviceName;
-
+    let subject;
+    
     switch(serviceType) {
         case 'basic':
-            serviceName = "Basic Website";
+            subject = "Order for Basic Website";
             message = "I would like to order the Basic Website.";
             break;
         case 'advanced':
-            serviceName = "Advanced Website";
+            subject = "Order for Advanced Website";
             message = "I would like to order the Advanced Website.";
             break;
         case 'premium':
-            serviceName = "Premium Website";
+            subject = "Order for Premium Website";
             message = "I would like to order the Premium Website.";
             break;
         default:
             return;
     }
-
-    const subject = `${serviceName} Order`;
-    const body = encodeURIComponent(message);
-    const url = `mailto:antocaptechnologies@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    
+    const url = `mailto:antocaptechnologies@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
     
     window.location.href = url;
 }
+
