@@ -28,56 +28,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-//service boxes
-let selectedServiceType;
+function showPopup(serviceType) {
+    let message;
+    let serviceName;
 
-        function showPopup(serviceType) {
-            selectedServiceType = serviceType;
-            let serviceName;
-            switch(serviceType) {
-                case 'basic':
-                    serviceName = "Basic Website";
-                    break;
-                case 'advanced':
-                    serviceName = "Advanced Website";
-                    break;
-                case 'premium':
-                    serviceName = "Premium Website";
-                    break;
-                default:
-                    return;
-            }
-            document.getElementById('popupMessage').innerText = `You selected the ${serviceName}. How would you like to order?`;
-            document.getElementById('overlay').style.display = 'block';
-            document.getElementById('popup').style.display = 'block';
-        }
+    switch(serviceType) {
+        case 'basic':
+            serviceName = "Basic Website";
+            message = "I would like to order the Basic Website.";
+            break;
+        case 'advanced':
+            serviceName = "Advanced Website";
+            message = "I would like to order the Advanced Website.";
+            break;
+        case 'premium':
+            serviceName = "Premium Website";
+            message = "I would like to order the Premium Website.";
+            break;
+        default:
+            return;
+    }
 
-        function hidePopup() {
-            document.getElementById('overlay').style.display = 'none';
-            document.getElementById('popup').style.display = 'none';
-        }
-
-        function order(method) {
-            hidePopup();
-            let message;
-            let url;
-            switch(selectedServiceType) {
-                case 'basic':
-                    message = "I would like to order the Basic Website.";
-                    break;
-                case 'advanced':
-                    message = "I would like to order the Advanced Website.";
-                    break;
-                case 'premium':
-                    message = "I would like to order the Premium Website.";
-                    break;
-                default:
-                    return;
-            }
-            if (method === 'email') {
-                url = "mailto:antocaptechnologies@gmail.com?subject=" + encodeURIComponent(`${selectedServiceType.charAt(0).toUpperCase() + selectedServiceType.slice(1)} Website Order`) + "&body=" + encodeURIComponent(message);
-            } else if (method === 'whatsapp') {
-                url = "https://wa.me/YOUR_PHONE_NUMBER?text=" + encodeURIComponent(message);
-            }
-            window.open(url, '_blank');
-        }
+    const subject = `${serviceName} Order`;
+    const body = encodeURIComponent(message);
+    const url = `mailto:antocaptechnologies@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    
+    window.location.href = url;
+}
