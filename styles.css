@@ -169,9 +169,11 @@ nav {
   background-size: cover;
   background-position: center;
   padding: 20px;
+  border: 2px solid red;
 }
 
 .box {
+  z-index: 1; /* Ensure it is above other elements if necessary */
   width: 300px;
   height: 450px;
   margin: 0 40px; /* Simplified margin */
@@ -185,6 +187,7 @@ nav {
   flex-direction: column;
   display: flex;
   flex: 0 0 auto;
+  border: 2px solid blue; /* Debugging border */
 }
 
 .box.basic {
@@ -207,13 +210,14 @@ nav {
 
 .box h2 {
   margin-top: 0;
+  align: center;
 }
 
 .box ul {
-  align-items: center;
+  align-items: left;
   list-style-type: none;
   display: flex;
-  padding-left: 0;
+  padding-left: 5px;
   flex-direction: column;
 }
 
