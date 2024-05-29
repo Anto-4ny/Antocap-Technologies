@@ -28,29 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-function order(serviceType) {
-    let message;
-    let subject;
-    
-    switch(serviceType) {
-        case 'basic':
-            subject = "Order for Basic Website";
-            message = "I would like to order the Basic Website.";
-            break;
-        case 'advanced':
-            subject = "Order for Advanced Website";
-            message = "I would like to order the Advanced Website.";
-            break;
-        case 'premium':
-            subject = "Order for Premium Website";
-            message = "I would like to order the Premium Website.";
-            break;
-        default:
-            return;
-    }
-    
-    const url = `mailto:antocaptechnologies@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-    
-    window.location.href = url;
-}
-
+document.querySelectorAll('.box').forEach(box => {
+  box.addEventListener('click', () => {
+    let websiteType = box.classList.contains('basic') ? "Basic Website" :
+                      box.classList.contains('advanced') ? "Advanced Website" :
+                      "Premium Website";
+    let message = "I want to order the " + websiteType;
+    window.location.href = "mailto:antocaptechnologies@gmail.com?subject=Website Order&body=" + encodeURIComponent(message);
+  });
+});
+        
