@@ -161,7 +161,7 @@ nav {
      margin-bottom: 30px
     }
 
-.container {
+   .container {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -169,26 +169,7 @@ nav {
     background-size: cover;
     background-position: center;
     padding: 20px;
-    flex-wrap: nowrap; /* Updated this line */
-    overflow-x: auto; /* Added this line to enable horizontal scrolling */
-}
-
-#basic-service {
-    background-color: #2196f3;
-    min-width: 200px;
-    min-height: 350px;
-}
-
-#advanced-service {
-    background-color: #4caf50;
-    min-width: 250px;
-    min-height: 300px;
-}
-
-#premium-service {
-    background-color: #ff9800;
-    min-width: 200px;
-    min-height: 350px;
+    flex-wrap: wrap; /* Add this line */
 }
 
 .service-box {
@@ -197,8 +178,11 @@ nav {
     color: #fff;
     cursor: pointer;
     transition: box-shadow 0.3s ease;
-    flex: 0 0 auto; /* Updated this line */
+    min-width: 300px;
+    height: 450px;
+    flex: 0 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
@@ -208,12 +192,24 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+#basic-service {
+    background-color: #2196f3;
+}
+
+#advanced-service {
+    background-color: #4caf50;
+}
+
+#premium-service {
+    background-color: #ff9800;
+}
+
 .service-box h2 {
     margin-top: 0;
 }
 
 .service-box ul {
-    list-style-type: decimal;
+    list-style-type: none;
     padding-left: 0;
     display: flex;
     flex-direction: column;
@@ -223,6 +219,7 @@ nav {
 .service-box li {
     margin: 5px 0;
 }
+
 
 
 .feature-box:hover {
