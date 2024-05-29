@@ -169,7 +169,7 @@ nav {
   background-size: cover;
   background-position: center;
   padding: 20px;
-  border: 2px solid red;
+  border: 2px solid black;
   box-sizing: border-box;
 }
 
@@ -188,7 +188,7 @@ nav {
   flex-direction: column;
   display: flex;
   flex: 0 0 auto;
-  border: 2px solid blue; /* Debugging border */
+  border: 2px solid gray; /* Debugging border */
 }
 
 .box.basic {
