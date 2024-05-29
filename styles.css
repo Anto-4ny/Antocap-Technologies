@@ -182,7 +182,7 @@ nav {
   box-sizing: border-box;
 }
 /* Wrapper for sliding boxes */
-.slider {
+.sliderforboxes {
   display: flex;
   animation: slide 20s linear infinite; /* Apply the sliding animation */
 }
