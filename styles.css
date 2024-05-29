@@ -165,11 +165,12 @@ nav {
     display: flex;
     gap: 20px;
     justify-content: center;
-    background-image: url('scr/Featureimages/1000_F_590848595_RSmUDckpXHZkPpF98fLxvAkaNYKF2vw0.jpg'); /* Replace 'your-image-url.jpg' with the URL of your background image */
-    background-size: cover; /* Ensure the background image covers the entire container */
-    background-position: center; /* Center the background image */
-    padding: 20px; /* Add padding to separate the background from the boxes */
-    flex-wrap: wrap; /* Add this line */
+    background-image: url('scr/Featureimages/1000_F_590848595_RSmUDckpXHZkPpF98fLxvAkaNYKF2vw0.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    flex-wrap: nowrap; /* Updated this line */
+    overflow-x: auto; /* Added this line to enable horizontal scrolling */
 }
 
 .service-box {
@@ -179,12 +180,11 @@ nav {
     cursor: pointer;
     transition: box-shadow 0.3s ease;
     min-width: 300px;
-    height: 450px;
-    flex: 1 1 auto;
+    /* height: 450px; */ /* Removed this line */
+    flex: 0 0 calc(33.33% - 40px); /* Updated this line */
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    align-items: center; /* Center items horizontally */
+    align-items: center;
 }
 
 .service-box:hover,
@@ -212,12 +212,12 @@ nav {
     list-style-type: none;
     padding-left: 0;
     display: flex;
-    flex-direction: column; /* Arrange list items vertically */
-    align-items: center; /* Center list items horizontally */
+    flex-direction: column;
+    align-items: center;
 }
 
 .service-box li {
-    margin: 5px 0; /* Adjusted */
+    margin: 5px 0;
 }
 
 
