@@ -166,6 +166,7 @@ nav {
   overflow-x: scroll; /* Enable horizontal scrolling */
   background-image: url('scr/Featureimages/1000_F_590848595_RSmUDckpXHZkPpF98fLxvAkaNYKF2vw0.jpg'); /* Background image for the container */
   background-size: cover;
+  background-position: center;
   padding: 20px; /* Add padding to create space between the boxes and the container edges */
 }
 
@@ -199,6 +200,7 @@ nav {
   transform: scale(1.1);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
         }
+
     
 
 
