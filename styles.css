@@ -5,9 +5,13 @@
     box-sizing: border-box;
 }
 
-body {
+body, html{
     font-family: Arial, sans-serif;
-}
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling for the whole page */
+    }
+
 
 /* Header styles */
 header {
@@ -165,7 +169,7 @@ nav {
 .containerforboxes {
   display: flex;
   justify-content: center;
-  overflow-x: hidden; /* Changed to 'auto' for better UX */
+  overflow: hidden; /* Changed to 'auto' for better UX */
   background-image: url('scr/Featureimages/1000_F_590848595_RSmUDckpXHZkPpF98fLxvAkaNYKF2vw0.jpg');
   background-size: cover;
   background-position: center;
