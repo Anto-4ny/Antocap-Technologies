@@ -167,9 +167,10 @@ nav {
 }
 
 .box {
-  width: 200px;
-  height: 350px;
-  margin-right: 20px; /* Adjust as needed */
+  width: 300px;
+  height: 450px;
+  margin-right: 40px; /* Adjust as needed */
+  margin-left: 40px;
   background-size: cover;
   position: relative;
   cursor: pointer;
