@@ -161,16 +161,30 @@ nav {
      margin-bottom: 30px
     }
 
+/* Keyframes for sliding animation */
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 .container {
   display: flex;
   justify-content: center;
-  overflow-x: auto; /* Changed to 'auto' for better UX */
+  overflow-x: hidden; /* Changed to 'auto' for better UX */
   background-image: url('scr/Featureimages/1000_F_590848595_RSmUDckpXHZkPpF98fLxvAkaNYKF2vw0.jpg');
   background-size: cover;
   background-position: center;
   padding: 20px;
   border: 2px solid black;
   box-sizing: border-box;
+}
+/* Wrapper for sliding boxes */
+.slider {
+  display: flex;
+  animation: slide 20s linear infinite; /* Apply the sliding animation */
 }
 
 .box {
