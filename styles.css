@@ -180,11 +180,13 @@ nav {
   padding: 20px;
   border: 2px solid black;
   box-sizing: border-box;
+  height: 500px;
 }
 /* Wrapper for sliding boxes */
 .sliderforboxes {
   display: flex;
-  animation: slide 20s linear infinite; /* Apply the sliding animation */
+  animation: slide 20s linear infinite; /* Apply sliding animation */
+  width: fit-content;
 }
 
 .box {
