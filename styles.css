@@ -169,6 +169,7 @@ nav {
     background-size: cover; /* Ensure the background image covers the entire container */
     background-position: center; /* Center the background image */
     padding: 20px; /* Add padding to separate the background from the boxes */
+    flex-wrap: wrap; /* Add this line */
 }
 
 .service-box {
