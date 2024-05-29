@@ -161,16 +161,8 @@ nav {
      margin-bottom: 30px
     }
 
-/* Keyframes for sliding animation */
-@keyframes slide {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }
-.container {
+.containerforboxes {
   display: flex;
   justify-content: center;
   overflow-x: hidden; /* Changed to 'auto' for better UX */
@@ -185,8 +177,22 @@ nav {
 /* Wrapper for sliding boxes */
 .sliderforboxes {
   display: flex;
-  animation: slide 20s linear infinite; /* Apply sliding animation */
   width: fit-content;
+}
+/* Keyframes for sliding animation */
+@keyframes slide1 {
+  0%, 20%, 100% { transform: translateX(0); }
+  10%, 30% { transform: translateX(-300px); }
+}
+
+@keyframes slide2 {
+  0%, 40%, 100% { transform: translateX(0); }
+  30%, 50% { transform: translateX(-300px); }
+}
+
+@keyframes slide3 {
+  0%, 60%, 100% { transform: translateX(0); }
+  50%, 70% { transform: translateX(-300px); }
 }
 
 .box {
@@ -209,14 +215,17 @@ nav {
 
 .box.basic {
   background-color: #2196f3;
+  animation: slide1 10s linear infinite;
 }
 
 .box.advanced {
   background-color: #4caf50;
+  animation: slide2 10s linear infinite;
 }
 
 .box.premium {
   background-color: #ff9800;
+  animation: slide3 10s linear infinite;
 }
 
 .box:hover,
