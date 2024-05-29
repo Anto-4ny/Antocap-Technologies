@@ -177,20 +177,20 @@ nav {
 
 #basic-service {
     background-color: #2196f3;
-    min-width: 300px;
-    min-height: 450px;
+    min-width: 200px;
+    min-height: 350px;
 }
 
 #advanced-service {
     background-color: #4caf50;
-    min-width: 350px;
-    min-height: 500px;
+    min-width: 250px;
+    min-height: 300px;
 }
 
 #premium-service {
     background-color: #ff9800;
-    min-width: 400px;
-    min-height: 550px;
+    min-width: 200px;
+    min-height: 350px;
 }
 
 .service-box {
@@ -215,7 +215,7 @@ nav {
 }
 
 .service-box ul {
-    list-style-type: none;
+    list-style-type: decimal;
     padding-left: 0;
     display: flex;
     flex-direction: column;
