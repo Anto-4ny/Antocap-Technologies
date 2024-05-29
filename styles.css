@@ -163,6 +163,8 @@ nav {
 
 .container {
     display: flex;
+    gap: 20.container {
+    display: flex;
     gap: 20px;
     justify-content: center;
     background-image: url('scr/Featureimages/1000_F_590848595_RSmUDckpXHZkPpF98fLxvAkaNYKF2vw0.jpg');
@@ -173,15 +175,31 @@ nav {
     overflow-x: auto; /* Added this line to enable horizontal scrolling */
 }
 
+#basic-service {
+    background-color: #2196f3;
+    min-width: 300px;
+    min-height: 450px;
+}
+
+#advanced-service {
+    background-color: #4caf50;
+    min-width: 350px;
+    min-height: 500px;
+}
+
+#premium-service {
+    background-color: #ff9800;
+    min-width: 400px;
+    min-height: 550px;
+}
+
 .service-box {
     padding: 20px;
     border-radius: 8px;
     color: #fff;
     cursor: pointer;
     transition: box-shadow 0.3s ease;
-    min-width: 300px;
-    /* height: 450px; */ /* Removed this line */
-    flex: 0 0 calc(33.33% - 40px); /* Updated this line */
+    flex: 0 0 auto; /* Updated this line */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -190,18 +208,6 @@ nav {
 .service-box:hover,
 .service-box:focus {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-#basic-service {
-    background-color: #2196f3;
-}
-
-#advanced-service {
-    background-color: #4caf50;
-}
-
-#premium-service {
-    background-color: #ff9800;
 }
 
 .service-box h2 {
