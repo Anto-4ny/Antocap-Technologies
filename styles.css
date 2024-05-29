@@ -176,6 +176,7 @@ nav {
   border: 2px solid black;
   box-sizing: border-box;
   height: 500px;
+  width: 100%;
 }
 /* Wrapper for sliding boxes */
 .sliderforboxes {
@@ -221,6 +222,7 @@ nav {
 .box.premium {
   background-color: #ff9800;
   animation: slide 10s linear infinite;
+  z-index: 2; 
 }
 
 .box:hover,
