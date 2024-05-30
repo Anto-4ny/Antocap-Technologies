@@ -178,19 +178,6 @@ nav {
   height: 500px;
   width: 100%;
 }
-/* Wrapper for sliding boxes */
-.sliderforboxes {
-  display: flex;
-  width: fit-content;
-}
-@keyframes slide {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-10%); }
-  50% { transform: translateX(-20%); }
-  75% { transform: translateX(-10%); }
-  100% { transform: translateX(0); }
-}
-
 .box {
   z-index: 1; /* Ensure it is above other elements if necessary */
   width: 200px;
@@ -211,18 +198,14 @@ nav {
 
 .box.basic {
   background-color: #2196f3;
-  animation: slide 10s linear infinite;
 }
 
 .box.advanced {
   background-color: #4caf50;
-  animation: slide 10s linear infinite;
 }
 
 .box.premium {
   background-color: #ff9800;
-  animation: slide 10s linear infinite;
-  z-index: 2; 
 }
 
 .box:hover,
