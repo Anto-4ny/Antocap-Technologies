@@ -168,7 +168,7 @@ nav {
 .containerforboxes {
   display: flex;
   justify-content: center;
-  overflow: hidden; /* Changed to 'auto' for better UX */
+  overflow: auto; /* Improved UX for overflow content */
   background-image: url('scr/Featureimages/1000_F_590848595_RSmUDckpXHZkPpF98fLxvAkaNYKF2vw0.jpg');
   background-size: cover;
   background-position: center;
@@ -193,7 +193,7 @@ nav {
   flex-direction: column;
   display: flex;
   flex: 0 0 auto;
-  border: 2px solid gray; /* Debugging border */
+  border-radius: 8px;
 }
 
 .box.basic {
@@ -216,7 +216,7 @@ nav {
 
 .box h2 {
   margin-top: 0;
-  align: center;
+  text-align: center;
 }
 
 .box ul {
