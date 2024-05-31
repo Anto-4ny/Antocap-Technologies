@@ -20,6 +20,10 @@ header {
     padding: 1rem;
     background: transparent;
     color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the header stays on top of other content */
 }
 
 .logo img {
