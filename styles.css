@@ -183,6 +183,7 @@ nav {
   box-sizing: border-box;
   height: 500px;
   width: 100%;
+  marigin-bottom: 50px;
 }
 .box {
   z-index: 1; /* Ensure it is above other elements if necessary */
@@ -252,7 +253,7 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .feature-box {
