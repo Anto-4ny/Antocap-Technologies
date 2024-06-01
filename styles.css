@@ -250,9 +250,9 @@ nav {
 .containerforfeatureboxes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 20px;
-    margin-bottom: 50px; /* Ensures space at the bottom */
+    margin-bottom: 50px;
 }
 
 .feature-box {
@@ -262,6 +262,9 @@ nav {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     position: relative;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .feature-box:hover {
@@ -313,10 +316,7 @@ nav {
     background-color: #0056b3;
 }
 
-
-
-
-
+    
 /* Footer styles */
 footer {
     background-color: #75E2FF;
