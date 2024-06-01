@@ -247,11 +247,12 @@ nav {
   }
 }
 
-.container {
+.containerforfeatureboxes {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px; /* Adjusts space between boxes */
+    margin-bottom: 50px;
 }
 
 .feature-box {
@@ -321,6 +322,7 @@ footer {
     color: black;
     padding: 20px 0;
     text-align: center;
+    margin-top: 50px;
 }
 
 .footer-logo img {
