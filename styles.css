@@ -247,6 +247,21 @@ nav {
   }
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Adjusts space between boxes */
+}
+
+.feature-box {
+    width: 200px;
+    height: 350px;
+    overflow: hidden; /* Ensures content doesn't overflow the box */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    cursor: pointer; /* Indicates that the box is clickable */
+    position: relative; /* For positioning the button */
+}
 
 .feature-box:hover {
     transform: translateY(-10px); /* Move the box up slightly on hover */
@@ -255,7 +270,7 @@ nav {
 
 .feature-box img {
     max-width: 100%;
-    transition: all 0.3s ease; /* Add transition for smooth hover effect on image */
+    transition: transform 0.3s ease; /* Add transition for smooth hover effect on image */
 }
 
 .feature-box:hover img {
@@ -274,7 +289,30 @@ nav {
 .feature-box p {
     font-size: 16px;
     color: #666;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Show ellipsis for overflow text */
 }
+
+.inquire-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.inquire-button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+
 
 
 /* Footer styles */
