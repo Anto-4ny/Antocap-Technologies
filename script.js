@@ -1,6 +1,7 @@
 // script.js
 
 document.addEventListener("DOMContentLoaded", () => {
+    
     // Slider functionality
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+//website development boxes
 document.querySelectorAll('.box').forEach(box => {
   box.addEventListener('click', () => {
     let websiteType = box.classList.contains('basic') ? "Basic Website" :
@@ -38,3 +40,11 @@ document.querySelectorAll('.box').forEach(box => {
   });
 });
         
+//feature boxes
+<script>
+function openFullScreen(contentId) {
+    // You can replace this with your own logic to open a new screen
+    // For example, you can redirect to a new page with the full content
+    window.location.href = 'full_screen_page.html?contentId=' + contentId;
+}
+</script>
