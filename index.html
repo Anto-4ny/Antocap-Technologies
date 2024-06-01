@@ -119,22 +119,35 @@
     </div>
 
     <section class="features">
-        <div class="feature-box">
-            <img src="scr/Featureimages/IT_support.jpg" alt="Feature 1">
-            <h3>Feature 1</h3>
-            <p>Description of feature 1.</p>
+    <div class="container">
+    <div class="feature-box" onclick="openFullScreen('content1')">
+        <img src="image1.jpg" alt="Image 1">
+        <div class="feature-box-content">
+            <h3>Title 1</h3>
+            <p>This is a description for feature 1. This text will be limited to 3 lines.</p>
+            <button class="inquire-button" onclick="event.stopPropagation(); window.location.href='mailto:antocaptechnologies@gmail.com';">Inquire</button>
         </div>
-        <div class="feature-box">
-            <img src="scr/Featureimages/feature2.jpg" alt="Feature 2">
-            <h3>Feature 2</h3>
-            <p>Description of feature 2.</p>
+    </div>
+    <div class="feature-box" onclick="openFullScreen('content2')">
+        <img src="image2.jpg" alt="Image 2">
+        <div class="feature-box-content">
+            <h3>Title 2</h3>
+            <p>This is a description for feature 2. This text will be limited to 3 lines.</p>
+            <button class="inquire-button" onclick="event.stopPropagation(); window.location.href='mailto:antocaptechnologies@gmail.com';">Inquire</button>
         </div>
-        <div classclass="feature-box">
-            <img src="scr/Featureimages/feature3.jpg" alt="Feature 3">
-            <h3>Feature 3</h3>
-            <p>Description of feature 3.</p>
+    </div>
+    <!-- Add more boxes as needed up to 14 -->
+    <div class="feature-box" onclick="openFullScreen('content3')">
+        <img src="image3.jpg" alt="Image 3">
+        <div class="feature-box-content">
+            <h3>Title 3</h3>
+            <p>This is a description for feature 3. This text will be limited to 3 lines.</p>
+            <button class="inquire-button" onclick="event.stopPropagation(); window.location.href='mailto:antocaptechnologies@gmail.com';">Inquire</button>
         </div>
-    </section>
+    </div>
+    <!-- Repeat for 14 boxes -->
+    </div>
+        
 
     <footer>
         <div class="logo">
