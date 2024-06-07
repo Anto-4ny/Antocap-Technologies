@@ -187,8 +187,8 @@ nav {
 }
 .box {
   z-index: 1; /* Ensure it is above other elements if necessary */
-  width: 200px;
-  height: 350px;
+  width: 400px;
+  height: 750px;
   margin: 0 40px; /* Simplified margin */
   background-size: cover;
   position: relative;
