@@ -220,10 +220,10 @@ nav {
 
 .box h2 {
   margin-top: 0;
+  margin-bottom: 5px; /* Adjust this value as needed */
   text-align: center;
   padding-top: 10px;
 }
-
 .box ul {
   align-items: left;
   list-style-type: none;
