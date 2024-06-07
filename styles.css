@@ -311,25 +311,27 @@ nav {
 .inquire-button:hover {
     background-color: #0056b3;
 }
-
+/*sidebar*/
 .containerforsidebar {
     display: flex;
     flex-wrap: wrap;
 }
 
 .content {
-    flex: 0 0 calc(100% - 250px); /* Adjust for sidebar width */
+    flex: 1;
     padding: 20px;
 }
 .feature-box {
     width: calc(33.33% - 13.33px); /* 3 boxes per row */
     /* Rest of your feature box styles */
 }
+
 .sidebar {
     flex: 0 0 250px; /* Sidebar width */
     background-color: #f4f4f4;
     padding: 20px;
 }
+
 .sidebar h2 {
     margin-top: 0;
     font-size: 20px;
@@ -354,7 +356,6 @@ nav {
 .sidebar ul li a:hover {
     color: #007bff;
 }
-
 
 /*login and sign up pages*/
 /*login page styles*/
