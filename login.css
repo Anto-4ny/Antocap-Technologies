@@ -1,7 +1,9 @@
 body {
     font-family: Arial, sans-serif;
 }
-
+.logo img {
+    height: 50px;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -11,7 +13,7 @@ header {
     color: #fff;
 }
 
-.header .logo img {
+.header {
     height: 40px;
 }
 
