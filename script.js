@@ -13,6 +13,8 @@ function nextSlide() {
     showSlide(currentIndex);
 }
 
+// Initial display
+showSlide(currentIndex);
 setInterval(nextSlide, 3000); // Change slide every 3 seconds
 
 // JavaScript for mobile menu toggle
@@ -37,6 +39,26 @@ function openFullScreen(contentId) {
         }
     }
 }
+
+// Example function for feature boxes (if you want interaction)
+const featureBoxes = document.querySelectorAll('.feature-box');
+featureBoxes.forEach(box => {
+    box.addEventListener('click', function() {
+        const contentId = this.getAttribute('data-content-id');
+        openFullScreen(contentId);
+    });
+});
+
+// Smooth Scrolling for anchor links (optional)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
 
 // Import Firebase configuration
 // Use this only if you are working in a module environment or a build tool is configured.
