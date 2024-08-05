@@ -1,3 +1,16 @@
+document.getElementById('menu-icon').addEventListener('click', function() {
+    console.log('Menu icon clicked');
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
+});
+
+function showSlide(index) {
+    console.log('Showing slide index:', index);
+    slides.forEach((slide, i) => {
+        slide.style.opacity = i === index ? '1' : '0';
+    });
+}
+
 // JavaScript for slider functionality
 let currentIndex = 0;
 const slides = document.querySelectorAll('.slide');
