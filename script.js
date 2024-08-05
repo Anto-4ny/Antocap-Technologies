@@ -1,16 +1,3 @@
-document.getElementById('menu-icon').addEventListener('click', function() {
-    console.log('Menu icon clicked');
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('active');
-});
-
-function showSlide(index) {
-    console.log('Showing slide index:', index);
-    slides.forEach((slide, i) => {
-        slide.style.opacity = i === index ? '1' : '0';
-    });
-}
-
 // JavaScript for slider functionality
 let currentIndex = 0;
 const slides = document.querySelectorAll('.slide');
@@ -30,6 +17,7 @@ setInterval(nextSlide, 3000); // Change slide every 3 seconds
 
 // JavaScript for mobile menu toggle
 document.getElementById('menu-icon').addEventListener('click', function() {
+    console.log('Menu icon clicked');
     const navLinks = document.getElementById('nav-links');
     navLinks.classList.toggle('active');
 });
@@ -42,14 +30,16 @@ function openFullScreen(contentId) {
             content.requestFullscreen();
         } else if (content.mozRequestFullScreen) { // Firefox
             content.mozRequestFullScreen();
-        } else if (content.webkitRequestFullscreen) { // Chrome, Safari and Opera
+        } else if (content.webkitRequestFullscreen) { // Chrome, Safari, and Opera
             content.webkitRequestFullscreen();
         } else if (content.msRequestFullscreen) { // IE/Edge
             content.msRequestFullscreen();
         }
     }
 }
+
 // Import Firebase configuration
+// Use this only if you are working in a module environment or a build tool is configured.
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
 
@@ -113,5 +103,3 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
         alert('Registration failed: ' + error.message);
     }
 });
-    
-
