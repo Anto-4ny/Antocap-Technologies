@@ -8,18 +8,19 @@
 </head>
 <body>
     <header>
+    <div class="header-container">
         <div class="logo">
             <img src="scr/Photo_1722093478037.png" alt="Antocap Teknologies Logo">
         </div>
         <nav>
-           <!--<div class="menu-icon" id="menu-icon">&#9776;</div>-->
-            <ul class="nav-links" id="nav-links">
+            <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a>
-                    <ul>
+                <li class="dropdown">
+                    <a href="#">Services</a>
+                    <ul class="dropdown-menu">
                         <li><a href="#web-development">Web Development</a></li>
                         <li><a href="#software-development">Software Development</a></li>
-                        <li><a href="#network-administration"></a></li>
+                        <li><a href="#network-administration">Network Administration</a></li>
                         <li><a href="#system-administration">System Administration</a></li>
                         <li><a href="#database-administration">Database Administration</a></li>
                         <li><a href="#cybersecurity">Cybersecurity</a></li>
@@ -29,7 +30,7 @@
                         <li><a href="#it-consulting">IT Consulting</a></li>
                         <li><a href="#project-management">Project Management</a></li>
                         <li><a href="#quality-assurance">Quality Assurance</a></li>
-                        <li><a href="#digital-marketing"">Digital Marketing</a></li>
+                        <li><a href="#digital-marketing">Digital Marketing</a></li>
                         <li><a href="#it-training">IT Training</a></li>
                         <li><a href="#iot-services">IoT Services</a></li>
                     </ul>
@@ -40,7 +41,9 @@
                 <li><a href="Login.html">Log In</a></li>
             </ul>
         </nav>
+    </div>
     </header>
+    
 
     <div class="slider" id="slider">
         <div class="slide active" style="background-image: url('scr/Antocap/slider1.jpg');">
