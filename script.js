@@ -1,3 +1,13 @@
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+
+    menuIcon.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+});
+
 // JavaScript for slider functionality
 let currentIndex = 0;
 const slides = document.querySelectorAll('.slide');
@@ -17,47 +27,6 @@ function nextSlide() {
 showSlide(currentIndex);
 setInterval(nextSlide, 3000); // Change slide every 3 seconds
 
-// JavaScript for mobile menu toggle
-document.getElementById('menu-icon').addEventListener('click', function() {
-    console.log('Menu icon clicked');
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('active');
-});
-
-// Function to open content in fullscreen
-function openFullScreen(contentId) {
-    const content = document.getElementById(contentId);
-    if (content) {
-        if (content.requestFullscreen) {
-            content.requestFullscreen();
-        } else if (content.mozRequestFullScreen) { // Firefox
-            content.mozRequestFullScreen();
-        } else if (content.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-            content.webkitRequestFullscreen();
-        } else if (content.msRequestFullscreen) { // IE/Edge
-            content.msRequestFullscreen();
-        }
-    }
-}
-
-// Example function for feature boxes (if you want interaction)
-const featureBoxes = document.querySelectorAll('.feature-box');
-featureBoxes.forEach(box => {
-    box.addEventListener('click', function() {
-        const contentId = this.getAttribute('data-content-id');
-        openFullScreen(contentId);
-    });
-});
-
-// Smooth Scrolling for anchor links (optional)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
 
 
 // Import Firebase configuration
