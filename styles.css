@@ -98,66 +98,7 @@ nav {
     background-color: #f4f4f4;
 }
 
-.services {
-    padding: 20px;
-    text-align: center;
-}
 
-.service-boxes {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.box {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    width: 30%;
-}
-
-.box h2 {
-    margin-top: 0;
-}
-
-.feature-section {
-    background-color: #f9f9f9;
-    padding: 20px;
-}
-
-.feature-box {
-    border: 1px solid #ddd;
-    margin: 10px;
-    border-radius: 8px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-}
-
-.feature-box img {
-    width: 100%;
-    height: auto;
-}
-
-.feature-box-content {
-    padding: 15px;
-    background-color: #fff;
-}
-
-.inquire-button {
-    background-color: #0056b3;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.inquire-button:hover {
-    background-color: #004494;
-}
 
 #software-development {
     padding: 50px 0;
@@ -1165,6 +1106,92 @@ nav {
         align-items: center;
     }
     }
+
+#iot-services {
+    padding: 50px 0;
+    background-color: #e0f2f1; /* Unique background color */
+    color: #333;
+}
+
+#iot-services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#iot-services h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #00796b; /* Unique color for IoT Services */
+}
+
+#iot-services p {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 280px;
+    margin: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+    transform: scale(1.05); /* Unique hover effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.service h3 {
+    font-size: 1.9em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.service p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.service ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.service ul li {
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+        }
 
 
 
