@@ -8,26 +8,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// JavaScript for slider functionality
-let currentIndex = 0;
-const slides = document.querySelectorAll('.slide');
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.opacity = i === index ? '1' : '0';
-    });
-}
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+    }
 
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-}
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
 
-// Initial display
-showSlide(currentIndex);
-setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    showSlide(currentIndex); // Show the first slide initially
 
+    // Change slide every 5 seconds
+    setInterval(nextSlide, 5000);
+});
 
+        
 
 // Import Firebase configuration
 // Use this only if you are working in a module environment or a build tool is configured.
