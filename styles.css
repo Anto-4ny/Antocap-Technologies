@@ -5,69 +5,109 @@ body {
     box-sizing: border-box;
 }
 
+/* Header Styles */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
+    background-color: #333; /* Dark background */
     color: #fff;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo img {
-    height: 50px;
+    height: 50px; /* Adjust logo size as needed */
 }
 
 nav {
-    position: relative;
-}
-
-.menu-icon {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
+    flex: 1;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
-    margin: 0;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.nav-links li {
+.nav-links > li {
     position: relative;
+    margin: 0 15px;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
+    font-size: 16px;
     padding: 10px 15px;
     display: block;
 }
 
-.nav-links ul {
+.nav-links a:hover,
+.nav-links .dropdown:hover > a {
+    background-color: #555; /* Hover background color */
+    border-radius: 4px;
+}
+
+.dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #444;
-    list-style: none;
+    background-color: #333;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
     padding: 0;
+    list-style: none;
+}
+
+.dropdown-menu li {
     margin: 0;
 }
 
-.nav-links li:hover ul {
+.dropdown-menu a {
+    padding: 10px 15px;
+    display: block;
+    color: #fff;
+}
+
+.dropdown-menu a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-menu {
     display: block;
 }
 
-.nav-links ul li {
-    padding: 10px 15px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-links > li {
+        margin: 10px 0;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        min-width: 100%;
+    }
 }
 
-.nav-links ul li a {
-    color: #fff;
-}
+
 
 .slider {
     position: relative;
