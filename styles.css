@@ -496,8 +496,6 @@ p {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    width: 600px;
-    height: 600px;
 }
 
 #network-administration h2 {
@@ -530,6 +528,8 @@ p {
     max-width: 300px;
     margin: 15px;
     text-align: center;
+    width: 600px;
+    height: 600px;
 }
 
 .service-icon {
