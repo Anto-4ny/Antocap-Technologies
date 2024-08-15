@@ -10,7 +10,7 @@ header {
     background-color: black;
     color: #fff;
     padding: 10px 20px;
-    position: fixed;
+    position: relative;
 }
 
 .header-container {
