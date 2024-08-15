@@ -495,8 +495,8 @@ p {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    width: 600;
-    height: 600;
+    width: 600px;
+    height: 600px;
 }
 
 #network-administration h2 {
@@ -525,8 +525,8 @@ p {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 200%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 300px;
     margin: 15px;
     text-align: center;
 }
