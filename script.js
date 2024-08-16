@@ -32,6 +32,34 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(nextSlide, 5000);
 });
 
+// Simple sliding functionality for reviews
+const reviewsSlider = document.querySelector('.reviews-slider');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+reviewsSlider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - reviewsSlider.offsetLeft;
+    scrollLeft = reviewsSlider.scrollLeft;
+});
+
+reviewsSlider.addEventListener('mouseleave', () => {
+    isDown = false;
+});
+
+reviewsSlider.addEventListener('mouseup', () => {
+    isDown = false;
+});
+
+reviewsSlider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - reviewsSlider.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    reviewsSlider.scrollLeft = scrollLeft - walk;
+});
+
         
 
 // Import Firebase configuration
