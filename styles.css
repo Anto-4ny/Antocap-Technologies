@@ -90,6 +90,28 @@ body {
     color: white;
 }
 
+.container nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents wrapping of list items */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Removes default list styling */
+}
+
+.container nav ul li {
+    display: inline-block;
+}
+
+.container nav ul li a {
+    display: block;
+    padding: 10px 15px; /* Adjust padding as necessary */
+    text-decoration: none;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar .container {
