@@ -1607,13 +1607,12 @@ h1, h2 {
 /*CONTACT US PAGE*/
 .contact-section {
     padding: 50px;
-    text-align: center;
     background-color: #fff;
 }
 
 .contact-section h1 {
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .contact-section p {
@@ -1621,81 +1620,88 @@ h1, h2 {
     margin-bottom: 40px;
 }
 
-.contact-options {
+.contact-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.contact-option {
-    width: 300px;
-    padding: 20px;
-    margin: 20px;
-    background-color: #333;
-    color: #fff;
+.contact-form,
+.contact-info {
+    background-color: #f9f9f9;
+    padding: 30px;
     border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.contact-option img {
-    width: 50px;
+    width: 45%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 20px;
 }
 
-.contact-option h2 {
-    font-size: 24px;
+.contact-form h2,
+.contact-info h2 {
     margin-bottom: 20px;
 }
 
-.contact-option a,
-.contact-option button {
-    color: #f0a500;
-    text-decoration: none;
-    font-size: 18px;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: transparent;
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.contact-option button:hover,
-.contact-option a:hover {
-    color: #fff;
-}
-
-.contact-option form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-option input,
-.contact-option textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
-    border: none;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 15px;
     font-size: 16px;
 }
 
-.contact-option textarea {
-    height: 100px;
-    resize: none;
-}
-
-.contact-option button {
-    background-color: #f0a500;
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.contact-option:hover {
-    transform: scale(1.05);
+.contact-form button:hover {
+    background-color: #555;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.form-status {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-
-
+    .contact-form,
+    .contact-info {
+        width: 80%;
+    }
+    }
 
 /* Footer Styles */
 footer {
