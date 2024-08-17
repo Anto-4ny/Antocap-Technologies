@@ -32,7 +32,66 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(nextSlide, 5000);
 });
 
-        
+// Simple sliding functionality for reviews
+const reviewsSlider = document.querySelector('.reviews-slider');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+reviewsSlider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - reviewsSlider.offsetLeft;
+    scrollLeft = reviewsSlider.scrollLeft;
+});
+
+reviewsSlider.addEventListener('mouseleave', () => {
+    isDown = false;
+});
+
+reviewsSlider.addEventListener('mouseup', () => {
+    isDown = false;
+});
+
+reviewsSlider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - reviewsSlider.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    reviewsSlider.scrollLeft = scrollLeft - walk;
+});
+
+//contact us page 
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const status = document.createElement('p');
+        status.classList.add('form-status');
+        form.appendChild(status);
+
+        fetch('send-email.php', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            if (response.status === 200) {
+                status.innerHTML = "Thank you! Your message has been sent.";
+                status.style.color = 'green';
+                form.reset();
+            } else {
+                return response.text().then(text => { throw new Error(text) });
+            }
+        })
+        .catch(error => {
+            status.innerHTML = error.message;
+            status.style.color = 'red';
+        });
+    });
+});
+
 
 // Import Firebase configuration
 // Use this only if you are working in a module environment or a build tool is configured.

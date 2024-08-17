@@ -7,7 +7,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #333;
+    background-color: black;
     color: #fff;
     padding: 10px 20px;
     position: relative;
@@ -138,6 +138,7 @@ nav {
 
     .menu-icon {
         display: block;
+        text-align: right;
     }
 }
 
@@ -170,7 +171,7 @@ nav {
     bottom: 20px;
     left: 20px;
     color: #fff;
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent;
     padding: 20px;
     border-radius: 5px;
 }
@@ -527,11 +528,13 @@ p {
     max-width: 300px;
     margin: 15px;
     text-align: center;
+    width: 600px;
+    height: 600px;
 }
 
 .service-icon {
-    width: 60px;
-    height: 60px;
+    width: 400px;
+    height: 400px;
     margin-bottom: 15px;
 }
 
@@ -610,8 +613,8 @@ p {
 }
 
 .service-icon {
-    width: 60px;
-    height: 60px;
+    width: 400px;
+    height: 400px;
     margin-bottom: 15px;
 }
 
@@ -690,8 +693,8 @@ p {
 }
 
 .service-icon {
-    width: 60px;
-    height: 60px;
+    width: 400px;
+    height: 400px;
     margin-bottom: 15px;
 }
 
@@ -770,8 +773,8 @@ p {
 }
 
 .service-icon {
-    width: 60px;
-    height: 60px;
+    width: 400px;
+    height: 400px;
     margin-bottom: 15px;
 }
 
@@ -850,8 +853,8 @@ p {
 }
 
 .service-icon {
-    width: 60px;
-    height: 60px;
+    width: 400px;
+    height: 400px;
     margin-bottom: 15px;
 }
 
@@ -930,8 +933,8 @@ p {
 }
 
 .service-icon {
-    width: 60px;
-    height: 60px;
+    width: 400px;
+    height: 400px;
     margin-bottom: 15px;
 }
 
@@ -1016,8 +1019,8 @@ p {
 }
 
 .service-icon {
-    width: 70px; /* Slightly larger icon */
-    height: 70px;
+    width: 450px; /* Slightly larger icon */
+    height: 450px;
     margin-bottom: 15px;
 }
 
@@ -1102,8 +1105,8 @@ p {
 }
 
 .service-icon {
-    width: 60px;
-    height: 60px;
+    width: 400px;
+    height: 400px;
     margin-bottom: 15px;
 }
 
@@ -1188,8 +1191,8 @@ p {
 }
 
 .service-icon {
-    width: 60px;
-    height: 60px;
+    width: 400px;
+    height: 400px;
     margin-bottom: 15px;
 }
 
@@ -1274,8 +1277,8 @@ p {
 }
 
 .service-icon {
-    width: 60px;
-    height: 60px;
+    width: 400px;
+    height: 400px;
     margin-bottom: 15px;
 }
 
@@ -1360,8 +1363,8 @@ p {
 }
 
 .service-icon {
-    width: 60px;
-    height: 60px;
+    width: 400px;
+    height: 400px;
     margin-bottom: 15px;
 }
 
@@ -1446,8 +1449,8 @@ p {
 }
 
 .service-icon {
-    width: 60px;
-    height: 60px;
+    width: 400px;
+    height: 400px;
     margin-bottom: 15px;
 }
 
@@ -1480,6 +1483,225 @@ p {
         align-items: center;
     }
         }
+
+/*OTHER PAGES*/
+/*about us page*/
+section {
+    margin: 40px 0;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+.about-us, .our-mission, .our-vision, .ceo, .team, .history, .values, .reviews, .newsletter {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.ceo-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ceo-profile img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.ceo-description {
+    max-width: 600px;
+    text-align: left;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    max-width: 200px;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.reviews-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+.review {
+    flex: 0 0 auto;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    border: none;
+    background-color:#f0a500;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #333;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .ceo-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .reviews-slider {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 480px) {
+    .newsletter input[type="email"] {
+        width: 100%;
+    }
+}
+
+/*CONTACT US PAGE*/
+.contact-section {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.contact-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-form,
+.contact-info {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    width: 45%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.contact-form h2,
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.form-status {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 80%;
+    }
+    }
 
 /* Footer Styles */
 footer {
