@@ -20,7 +20,7 @@ body {
     position: fixed;
 }
 
-.top-bar .container {
+.top-bar .containeer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,7 +42,7 @@ body {
     padding: 15px 0;
 }
 
-.navbar .container {
+.navbar .containeer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,7 +90,7 @@ body {
     color: white;
 }
 
-.container nav ul {
+.containeer nav ul {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto; /* Enables horizontal scrolling */
@@ -100,11 +100,11 @@ body {
     list-style: none; /* Removes default list styling */
 }
 
-.container nav ul li {
+.containeer nav ul li {
     display: inline-block;
 }
 
-.container nav ul li a {
+.containeer nav ul li a {
     display: block;
     padding: 10px 15px; /* Adjust padding as necessary */
     text-decoration: none;
