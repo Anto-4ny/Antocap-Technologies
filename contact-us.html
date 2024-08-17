@@ -10,16 +10,16 @@
 
     <header>
         <div class="logo">
-            <img src="scr/Photo_1722093478037.png" alt="Antocap Teknologies Logo">
+            <img src="images/Photo_1722093478037.png" alt="Antocap Teknologies Logo">
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about-us.html">About Us</a></li>
                 <li><a href="contact-us.html">Contact Us</a></li>
-                <li><a href="#">Sign Up</a></li>
-                <li><a href="Login.html">Log In</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Log In</a></li>
             </ul>
         </nav>
     </header>
@@ -28,27 +28,31 @@
         <h1>Contact Us</h1>
         <p>We're here to help. Reach out to us via any of the methods below:</p>
 
-        <div class="contact-options">
-            <div class="contact-option">
-                <img src="scr/email-icon.png" alt="Email Us">
-                <h2>Email Us</h2>
-                <form id="contact-form" method="post" action="send-email.php">
-                    <input type="text" name="subject" placeholder="Subject" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
+        <div class="contact-container">
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form id="contact-form" method="POST" action="send-email.php">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
                     <button type="submit">Send Message</button>
                 </form>
             </div>
 
-            <div class="contact-option">
-                <img src="scr/phone-icon.png" alt="Call Us">
-                <h2>Call Us</h2>
-                <a href="tel:+254757492614" class="contact-link">+254 757 492 614</a>
-            </div>
-
-            <div class="contact-option">
-                <img src="scr/whatsapp-icon.png" alt="WhatsApp Us">
-                <h2>WhatsApp Us</h2>
-                <a href="https://wa.me/+254757492614?text=Hello%20Antocap%20Teknologies!%20I%20would%20like%20to%20know%20more%20about%20your%20services." class="contact-link" target="_blank">Message on WhatsApp</a>
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p><strong>Phone:</strong> <a href="tel:+254757492614">+254 757 492 614</a></p>
+                <p><strong>Email:</strong> <a href="mailto:antocaptechnologies@gmail.com">antocaptechnologies@gmail.com</a></p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/+254757492614" target="_blank">Chat on WhatsApp</a></p>
             </div>
         </div>
     </section>
@@ -60,3 +64,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+                       
