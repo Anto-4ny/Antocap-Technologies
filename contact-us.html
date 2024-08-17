@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Antocap Teknologies</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact-us.css">
 </head>
 <body>
 
@@ -14,9 +14,9 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#service">Services</a></li>
-                <li><a href="about us.html">About Us</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
                 <li><a href="contact-us.html">Contact Us</a></li>
                 <li><a href="#">Sign Up</a></li>
                 <li><a href="Login.html">Log In</a></li>
@@ -32,7 +32,11 @@
             <div class="contact-option">
                 <img src="scr/email-icon.png" alt="Email Us">
                 <h2>Email Us</h2>
-                <a href="mailto:antocaptechnologies@gmail.com" class="contact-link">Send an Email</a>
+                <form id="contact-form" method="post" action="send-email.php">
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
             </div>
 
             <div class="contact-option">
@@ -44,7 +48,7 @@
             <div class="contact-option">
                 <img src="scr/whatsapp-icon.png" alt="WhatsApp Us">
                 <h2>WhatsApp Us</h2>
-                <a href="https://wa.me/+254757492614?text=Hello%20Antocap%20Teknologies!%20I%20would%20like%20to%20know%20more%20about%20your%20services." class="contact-link" target="_blank">Message Us on WhatsApp</a>
+                <a href="https://wa.me/+254757492614?text=Hello%20Antocap%20Teknologies!%20I%20would%20like%20to%20know%20more%20about%20your%20services." class="contact-link" target="_blank">Message on WhatsApp</a>
             </div>
         </div>
     </section>
@@ -53,7 +57,6 @@
         <p>&copy; 2024 Antocap Teknologies. All Rights Reserved.</p>
     </footer>
 
-    <script src="contact-us.js"></script>
+    <script src="script.js"></script>
 </body>
-  </html>
-      
+</html>
