@@ -1604,6 +1604,61 @@ h1, h2 {
     }
 }
 
+/*CONTACT US PAGE*/
+.contact-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.contact-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contact-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-option {
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-option img {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.contact-option h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-option a {
+    color: #f0a500;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.contact-option:hover {
+    transform: scale(1.05);
+}
+
+
 /* Footer Styles */
 footer {
     background-color: #333;
