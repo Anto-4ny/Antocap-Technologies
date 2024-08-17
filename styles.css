@@ -1648,15 +1648,53 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
-.contact-option a {
+.contact-option a,
+.contact-option button {
     color: #f0a500;
     text-decoration: none;
     font-size: 18px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.contact-option button:hover,
+.contact-option a:hover {
+    color: #fff;
+}
+
+.contact-option form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-option input,
+.contact-option textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-option textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-option button {
+    background-color: #f0a500;
+    border-radius: 5px;
 }
 
 .contact-option:hover {
     transform: scale(1.05);
-}
+    }
+
+
 
 
 /* Footer Styles */
