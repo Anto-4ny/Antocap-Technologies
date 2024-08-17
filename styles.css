@@ -1490,8 +1490,8 @@ section {
 }
 
 h1, h2 {
-    color: #333;
-    text-align: center;
+    color: white;
+    text-align: left;
 }
 
 .about-us, .our-mission, .our-vision, .ceo, .team, .history, .values, .reviews, .newsletter {
