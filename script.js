@@ -94,7 +94,59 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
         });
 });
             
+// Array of suggestions
+const suggestionsList = [
+    {name: "Web Development", href: "#web-development"},
+    {name: "Software Development", href: "#software-development"},
+    {name: "Network Administration", href: "#network-administration"},
+    {name: "System Administration", href: "#system-administration"},
+    {name: "Database Administration", href: "#database-administration"},
+    {name: "Cybersecurity", href: "#cybersecurity"},
+    {name: "Cloud Computing", href: "#cloud-computing"},
+    {name: "IT Support", href: "#it-support"},
+    {name: "Data Analysis", href: "#data-analysis"},
+    {name: "IT Consulting", href: "#it-consulting"},
+    {name: "Project Management", href: "#project-management"},
+    {name: "Quality Assurance", href: "#quality-assurance"},
+    {name: "Digital Marketing", href: "#digital-marketing"},
+    {name: "IT Training", href: "#it-training"},
+    {name: 'IoT Services"}
+];
 
+// Function to show suggestions
+function showSuggestions() {
+    const input = document.getElementById('search').value.toLowerCase();
+    const suggestionsContainer = document.getElementById('suggestions');
+    suggestionsContainer.innerHTML = ''; // Clear previous suggestions
+
+    if (input) {
+        const filteredSuggestions = suggestionsList.filter(service =>
+            service.name.toLowerCase().includes(input)
+        );
+
+        filteredSuggestions.forEach(service => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = service.href;
+            a.textContent = service.name;
+            li.appendChild(a);
+            suggestionsContainer.appendChild(li);
+        });
+
+        suggestionsContainer.style.display = 'block'; // Show suggestions
+    } else {
+        suggestionsContainer.style.display = 'none'; // Hide suggestions if input is empty
+    }
+}
+
+// Optional: Hide suggestions when clicking outside the search bar
+document.addEventListener('click', function(event) {
+    const suggestionsContainer = document.getElementById('suggestions');
+    if (!event.target.closest('.search-bar')) {
+        suggestionsContainer.style.display = 'none';
+    }
+});
+    
 
 
 // Simple sliding functionality for reviews
