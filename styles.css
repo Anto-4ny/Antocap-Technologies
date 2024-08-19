@@ -544,7 +544,7 @@ body {
 }
 
 .service-icon {
-    width: 80%;  /* Slight padding from the sides */
+    width: auto;  /* Slight padding from the sides */
     height: auto;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -605,11 +605,7 @@ body {
         max-width: 100%;
         margin-bottom: 30px;
     }
-    }
-
-
-
-
+}
 #system-administration {
     padding: 50px 0;
     background-color: #f1f1f1;
