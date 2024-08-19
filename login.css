@@ -30,6 +30,7 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     outline: none;
+    flex: 1;
 }
 
 .toggle-buttons button.active {
@@ -46,6 +47,7 @@ body {
 
 .form-group {
     margin-bottom: 15px;
+    position: relative;
 }
 
 .form-group label {
@@ -54,18 +56,17 @@ body {
 }
 
 .form-group input {
-    width: calc(100% - 40px);
+    width: 100%;
     padding: 10px;
-    margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 .toggle-password {
     cursor: pointer;
-    position: relative;
-    top: -35px;
-    left: 290px;
+    position: absolute;
+    top: 38px;
+    right: 10px;
 }
 
 button[type="submit"] {
@@ -98,3 +99,48 @@ button[type="submit"]:hover {
 .social-icon:hover {
     color: #007bff;
 }
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        box-shadow: none;
+        border-radius: 5px;
+    }
+
+    .toggle-buttons button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .form-group input {
+        padding: 8px;
+    }
+
+    button[type="submit"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .social-icon {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .toggle-buttons {
+        flex-direction: column;
+    }
+
+    .toggle-buttons button {
+        margin-bottom: 10px;
+    }
+
+    .toggle-password {
+        top: 32px;
+    }
+    }
