@@ -499,8 +499,8 @@ body {
 }
 
 #network-administration {
-    padding: 50px 0;
-    background-color: #f1f1f1;
+    padding: 60px 0;
+    background-color: #f8f9fa;
     color: #333;
 }
 
@@ -513,52 +513,61 @@ body {
 #network-administration h2 {
     text-align: center;
     font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #007BFF;
+    margin-bottom: 30px;
+    color: #0056b3;
+    font-weight: 700;
 }
 
 #network-administration p {
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 1.1em;
-    line-height: 1.6;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
 }
 
 .services {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .service {
     background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 450px;
-    margin: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    flex-basis: calc(33.333% - 20px); /* 3 columns layout */
+    max-width: calc(33.333% - 20px);
     text-align: center;
-    flex-grow: 1;
-    flex-basis: 45%; /* Allow flexible resizing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .service-icon {
-    width: 100%;  /* Use the full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 15px;
-    border-radius: 44px; /* Optional: Add rounded corners to match box style */
+    width: 80%;  /* Slight padding from the sides */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 .service h3 {
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin-bottom: 15px;
     color: #333;
+    font-weight: 600;
 }
 
 .service p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-size: 1.1em;
+    color: #666;
 }
 
 .service ul {
@@ -566,11 +575,30 @@ body {
     padding: 0;
     margin: 0;
     text-align: left;
-    font-size: 1.1em;
+    font-size: 1em;
+    color: #555;
 }
 
 .service ul li {
     margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.service ul li:before {
+    content: "\2022";
+    color: #0056b3;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@media (max-width: 1024px) {
+    .service {
+        flex-basis: calc(50% - 20px); /* Switch to 2 columns on tablets */
+        max-width: calc(50% - 20px);
+    }
 }
 
 @media (max-width: 768px) {
@@ -580,11 +608,13 @@ body {
     }
 
     .service {
-        max-width: 100%; /* Full width on smaller screens */
-        margin-bottom: 20px;
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
     }
-        }
-    
+    }
+
+
 
 
 #system-administration {
