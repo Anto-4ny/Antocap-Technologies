@@ -35,59 +35,7 @@ body {
 .top-links a:hover, .account-links a:hover {
     color: #ff6a00;
 }
-/* Navbar */
-.navbar {
-    background: white;
-    border-bottom: 1px solid #ddd;
-    padding: 15px 0;
-}
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap if needed */
-}
-
-.navbar .logo {
-    display: flex;
-    align-items: center;
-    flex: 1;
-}
-
-.navbar .logo img {
-    height: 40px; /* Adjust the height as needed */
-    width: auto;
-}
-
-.navbar nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    flex: 2;
-    justify-content: flex-end;
-}
-
-.navbar nav ul li {
-    margin: 0 10px;
-}
-
-.navbar nav ul li a {
-    display: block;
-    text-decoration: none;
-    color: #333;
-    padding: 10px 15px;
-    background-color: #f8f8f8;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-size: 16px;
-}
-
-.navbar nav ul li a:hover {
-    background-color: #ff6a00;
-    color: white;
-}
 
 .scrollable-nav-container {
     overflow-x: auto;
@@ -139,28 +87,6 @@ body {
     }
     }
 
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar nav ul {
-        justify-content: center;
-    }
-
-    .navbar nav ul li {
-        margin: 5px 0;
-    }
-
-    .navbar nav ul li a {
-        padding: 8px 12px;
-        font-size: 14px;
-    }
-}
-
 .banner {
     background: url('scr/Featureimages/1000_F_590848595_RSmUDckpXHZkPpF98fLxvAkaNYKF2vw0.jpg') no-repeat center center/cover;
     height: 300px;
@@ -204,7 +130,7 @@ body {
     font-size: 16px;
     border: none;
     border-radius: 0 4px 4px 0;
-    background-color: #f68b1e;
+    background-color: blue;
     color: #fff;
     cursor: pointer;
 }
