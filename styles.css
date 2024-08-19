@@ -544,8 +544,8 @@ body {
 }
 
 .service-icon {
-    width: auto;  /* Slight padding from the sides */
-    height: auto;
+    width: 200px;  /* Slight padding from the sides */
+    height: 200px;
     margin-bottom: 20px;
     border-radius: 10px;
 }
