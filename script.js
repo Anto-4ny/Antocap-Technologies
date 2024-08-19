@@ -1,36 +1,101 @@
+// Firebase configuration
+const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_AUTH_DOMAIN",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_STORAGE_BUCKET",
+    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    appId: "YOUR_APP_ID"
+};
 
-document.addEventListener('DOMContentLoaded', function() {
-    const menuIcon = document.getElementById('menu-icon');
-    const navLinks = document.getElementById('nav-links');
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
 
-    menuIcon.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
+// Toggle between login and register forms
+const loginSection = document.getElementById('login-section');
+const registerSection = document.getElementById('register-section');
+const loginButton = document.getElementById('show-login');
+const registerButton = document.getElementById('show-register');
+
+loginButton.addEventListener('click', () => {
+    loginSection.classList.add('active');
+    registerSection.classList.remove('active');
+    loginButton.classList.add('active');
+    registerButton.classList.remove('active');
+});
+
+registerButton.addEventListener('click', () => {
+    registerSection.classList.add('active');
+    loginSection.classList.remove('active');
+    registerButton.classList.add('active');
+    loginButton.classList.remove('active');
+});
+
+// Show/hide password
+document.querySelectorAll('.toggle-password').forEach(item => {
+    item.addEventListener('click', function () {
+        const input = this.previousElementSibling;
+        const icon = this.querySelector('i');
+        if (input.type === 'password') {
+            input.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            input.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const slides = document.querySelectorAll('.slide');
-    let currentIndex = 0;
+// Register new user
+document.getElementById('registerForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('register-email').value;
+    const password = document.getElementById('register-password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.remove('active');
-            if (i === index) {
-                slide.classList.add('active');
-            }
+    if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+    }
+
+    auth.createUserWithEmailAndPassword(email, password)
+        .then(userCredential => {
+            // Save user data to Firestore
+            return db.collection('users').doc(userCredential.user.uid).set({
+                email: email,
+                createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            });
+        })
+        .then(() => {
+            alert('Registration successful!');
+        })
+        .catch(error => {
+            alert(error.message);
         });
-    }
-
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
-    }
-
-    showSlide(currentIndex); // Show the first slide initially
-
-    // Change slide every 5 seconds
-    setInterval(nextSlide, 5000);
 });
+
+// Login existing user
+document.getElementById('loginForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+
+    auth.signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            alert('Login successful!');
+            // Redirect or perform actions after successful login
+        })
+        .catch((error) => {
+            alert(error.message);
+        });
+});
+            
+
+
 
 // Simple sliding functionality for reviews
 const reviewsSlider = document.querySelector('.reviews-slider');
@@ -90,71 +155,4 @@ document.addEventListener("DOMContentLoaded", function () {
             status.style.color = 'red';
         });
     });
-});
-
-
-// Import Firebase configuration
-// Use this only if you are working in a module environment or a build tool is configured.
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
-// Toggle between login and registration forms
-document.getElementById('show-login').addEventListener('click', () => {
-    document.getElementById('login-section').classList.remove('hidden');
-    document.getElementById('register-section').classList.add('hidden');
-    document.getElementById('show-login').classList.add('active');
-    document.getElementById('show-register').classList.remove('active');
-});
-
-document.getElementById('show-register').addEventListener('click', () => {
-    document.getElementById('login-section').classList.add('hidden');
-    document.getElementById('register-section').classList.remove('hidden');
-    document.getElementById('show-login').classList.remove('active');
-    document.getElementById('show-register').classList.add('active');
-});
-
-// Handle login form submission
-document.getElementById('loginForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const email = document.getElementById('login-email').value;
-    const password = document.getElementById('login-password').value;
-
-    try {
-        await signInWithEmailAndPassword(auth, email, password);
-        alert('Login successful!');
-        // Redirect to another page or handle successful login
-    } catch (error) {
-        console.error('Error logging in:', error);
-        alert('Login failed: ' + error.message);
-    }
-});
-
-// Handle registration form submission
-document.getElementById('registerForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const email = document.getElementById('register-email').value;
-    const password = document.getElementById('register-password').value;
-
-    try {
-        await createUserWithEmailAndPassword(auth, email, password);
-        alert('Registration successful!');
-        // Redirect to another page or handle successful registration
-    } catch (error) {
-        console.error('Error registering:', error);
-        alert('Registration failed: ' + error.message);
-    }
 });
