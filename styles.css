@@ -1,3 +1,4 @@
+l
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -540,13 +541,14 @@ body {
     max-width: 300px;
     margin: 15px;
     text-align: center;
-    width: 600px;
-    height: 600px;
+    /* Removed fixed height to allow flexibility */
 }
 
 .service-icon {
-    width: 400px;
-    height: 400px;
+    width: 100%; /* Set to 100% for responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Set maximum width */
+    max-height: 400px; /* Set maximum height */
     margin-bottom: 15px;
 }
 
@@ -579,6 +581,7 @@ body {
         align-items: center;
     }
 }
+
 
 #system-administration {
     padding: 50px 0;
