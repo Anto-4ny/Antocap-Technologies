@@ -47,6 +47,7 @@ body {
     padding: 10px;
     background-color: #f8f9fa; /* Light background for contrast */
     margin-top: 80px; /* Add space below the top bar */
+    position: fixed;
 }
 
 /* Logo styles */
