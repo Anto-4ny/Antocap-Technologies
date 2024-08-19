@@ -35,16 +35,26 @@ body {
 .top-links a:hover, .account-links a:hover {
     color: #ff6a00;
 }
-
-
+/* Container for the navigation */
 .scrollable-nav-container {
+    display: flex;
+    align-items: center;
     overflow-x: auto;
+    padding: 10px;
+    background-color: #f8f9fa; /* Light background for contrast */
 }
 
+/* Logo styles */
+.scrollable-logo img {
+    height: 50px; /* Adjust logo size */
+    margin-right: 20px; /* Space between logo and nav links */
+}
+
+/* Navigation styles */
 .scrollable-nav {
     display: flex;
-    justify-content: center; /* Center the nav items */
     align-items: center;
+    flex-grow: 1;
 }
 
 .scrollable-nav-list {
@@ -57,22 +67,38 @@ body {
     list-style: none;
 }
 
+/* Link container styles */
 .scrollable-nav-list li {
     display: inline-block;
+    margin-right: 10px; /* Space between items */
 }
 
 .scrollable-nav-list li a {
     display: block;
-    padding: 10px 15px;
+    padding: 10px 20px; /* Padding inside each link */
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
     text-decoration: none;
-    white-space: nowrap;
+    border-radius: 20px; /* Rounded corners */
+    border: 1px solid #ddd; /* Light border for better visibility */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+}
+
+/* Hover effect for links */
+.scrollable-nav-list li a:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #ffffff; /* White text on hover */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .scrollable-nav-list li a {
-        padding: 8px 10px; /* Reduce padding on smaller screens */
-        font-size: 14px; /* Adjust font size for better readability */
+        padding: 8px 15px; /* Reduce padding on smaller screens */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .scrollable-logo img {
+        height: 40px; /* Adjust logo size on smaller screens */
     }
 }
 
@@ -82,10 +108,15 @@ body {
     }
 
     .scrollable-nav-list li a {
-        padding: 6px 8px; /* Further reduce padding on very small screens */
+        padding: 6px 10px; /* Further reduce padding on very small screens */
         font-size: 12px; /* Smaller font size for compact display */
     }
+
+    .scrollable-logo img {
+        height: 30px; /* Smaller logo size for mobile screens */
     }
+}
+
 
 .banner {
     background: url('scr/Featureimages/1000_F_590848595_RSmUDckpXHZkPpF98fLxvAkaNYKF2vw0.jpg') no-repeat center center/cover;
