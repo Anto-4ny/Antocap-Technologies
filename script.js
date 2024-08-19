@@ -96,24 +96,24 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
             
 // Array of suggestions
 const suggestionsList = [
-    {name: "Web Development", href: "#web-development"},
-    {name: "Software Development", href: "#software-development"},
-    {name: "Network Administration", href: "#network-administration"},
-    {name: "System Administration", href: "#system-administration"},
-    {name: "Database Administration", href: "#database-administration"},
-    {name: "Cybersecurity", href: "#cybersecurity"},
-    {name: "Cloud Computing", href: "#cloud-computing"},
-    {name: "IT Support", href: "#it-support"},
-    {name: "Data Analysis", href: "#data-analysis"},
-    {name: "IT Consulting", href: "#it-consulting"},
-    {name: "Project Management", href: "#project-management"},
-    {name: "Quality Assurance", href: "#quality-assurance"},
-    {name: "Digital Marketing", href: "#digital-marketing"},
-    {name: "IT Training", href: "#it-training"},
-    {name: 'IoT Services"}
+    { name: "Web Development", href: "#web-development" },
+    { name: "Software Development", href: "#software-development" },
+    { name: "Network Administration", href: "#network-administration" },
+    { name: "System Administration", href: "#system-administration" },
+    { name: "Database Administration", href: "#database-administration" },
+    { name: "Cybersecurity", href: "#cybersecurity" },
+    { name: "Cloud Computing", href: "#cloud-computing" },
+    { name: "IT Support", href: "#it-support" },
+    { name: "Data Analysis", href: "#data-analysis" },
+    { name: "IT Consulting", href: "#it-consulting" },
+    { name: "Project Management", href: "#project-management" },
+    { name: "Quality Assurance", href: "#quality-assurance" },
+    { name: "Digital Marketing", href: "#digital-marketing" },
+    { name: "IT Training", href: "#it-training" },
+    { name: "IoT Services", href: "#iot-services" }
 ];
 
-// Function to show suggestions
+// Function to show suggestions as user types
 function showSuggestions() {
     const input = document.getElementById('search').value.toLowerCase();
     const suggestionsContainer = document.getElementById('suggestions');
@@ -124,18 +124,39 @@ function showSuggestions() {
             service.name.toLowerCase().includes(input)
         );
 
-        filteredSuggestions.forEach(service => {
+        if (filteredSuggestions.length > 0) {
+            filteredSuggestions.forEach(service => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = service.href;
+                a.textContent = service.name;
+                li.appendChild(a);
+                suggestionsContainer.appendChild(li);
+            });
+            suggestionsContainer.style.display = 'block'; // Show suggestions
+        } else {
             const li = document.createElement('li');
-            const a = document.createElement('a');
-            a.href = service.href;
-            a.textContent = service.name;
-            li.appendChild(a);
+            li.textContent = 'No matching services found';
+            li.style.color = 'red';
             suggestionsContainer.appendChild(li);
-        });
-
-        suggestionsContainer.style.display = 'block'; // Show suggestions
+            suggestionsContainer.style.display = 'block'; // Show "not found" message
+        }
     } else {
         suggestionsContainer.style.display = 'none'; // Hide suggestions if input is empty
+    }
+}
+
+// Function to handle search button click
+function handleSearch() {
+    const input = document.getElementById('search').value.toLowerCase();
+    const matchingService = suggestionsList.find(service =>
+        service.name.toLowerCase() === input
+    );
+
+    if (matchingService) {
+        window.location.href = matchingService.href; // Redirect to the matched service
+    } else {
+        alert('Service not found.'); // Show alert if no match is found
     }
 }
 
@@ -146,7 +167,9 @@ document.addEventListener('click', function(event) {
         suggestionsContainer.style.display = 'none';
     }
 });
-    
+
+// Attach event listeners
+document.querySelector('.search-bar button').addEventListener('click', handleSearch);
 
 
 // Simple sliding functionality for reviews
