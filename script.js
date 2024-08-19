@@ -72,6 +72,7 @@ document.getElementById('registerForm').addEventListener('submit', (e) => {
         })
         .then(() => {
             alert('Registration successful!');
+            // Redirect to another page or update UI as needed
         })
         .catch(error => {
             alert(error.message);
@@ -93,7 +94,7 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
             alert(error.message);
         });
 });
-            
+
 // Array of suggestions
 const suggestionsList = [
     { name: "Web Development", href: "#web-development" },
@@ -171,7 +172,6 @@ document.addEventListener('click', function(event) {
 // Attach event listeners
 document.querySelector('.search-bar button').addEventListener('click', handleSearch);
 
-
 // Simple sliding functionality for reviews
 const reviewsSlider = document.querySelector('.reviews-slider');
 let isDown = false;
@@ -200,7 +200,7 @@ reviewsSlider.addEventListener('mousemove', (e) => {
     reviewsSlider.scrollLeft = scrollLeft - walk;
 });
 
-//contact us page 
+// Contact us page functionality
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('contact-form');
 
@@ -231,3 +231,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+        
