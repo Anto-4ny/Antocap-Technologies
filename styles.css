@@ -1069,7 +1069,6 @@ body {
     }
 }
 
-
 #it-support {
     padding: 50px 0;
     background-color: #f1f1f1;
@@ -1115,8 +1114,8 @@ body {
 }
 
 .service-icon {
-    width: 400px;
-    height: 400px;
+    width: 150px; /* Adjusted size */
+    height: 150px;
     margin-bottom: 15px;
 }
 
@@ -1183,10 +1182,10 @@ body {
 }
 
 .service {
-    background: #f9f9f9;
+    background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
     max-width: 300px;
@@ -1201,8 +1200,8 @@ body {
 }
 
 .service-icon {
-    width: 450px; /* Slightly larger icon */
-    height: 450px;
+    width: 150px; /* Adjusted size */
+    height: 150px;
     margin-bottom: 15px;
 }
 
@@ -1234,7 +1233,7 @@ body {
         flex-direction: column;
         align-items: center;
     }
-        }
+}
 
 #it-consulting {
     padding: 50px 0;
@@ -1287,8 +1286,8 @@ body {
 }
 
 .service-icon {
-    width: 400px;
-    height: 400px;
+    width: 150px; /* Adjusted size */
+    height: 150px;
     margin-bottom: 15px;
 }
 
@@ -1373,8 +1372,8 @@ body {
 }
 
 .service-icon {
-    width: 400px;
-    height: 400px;
+    width: 150px; /* Adjusted size for consistency */
+    height: 150px;
     margin-bottom: 15px;
 }
 
@@ -1406,7 +1405,7 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    }
+}
 
 #digital-marketing {
     padding: 50px 0;
@@ -1447,7 +1446,7 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
-    max-width: 280px;
+    max-width: 280px; /* Consistent width */
     margin: 15px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -1459,8 +1458,8 @@ body {
 }
 
 .service-icon {
-    width: 400px;
-    height: 400px;
+    width: 150px; /* Consistent size */
+    height: 150px;
     margin-bottom: 15px;
 }
 
@@ -1545,7 +1544,7 @@ body {
 }
 
 .service-icon {
-    width: 400px;
+    width: 400px; /* Consistent size */
     height: 400px;
     margin-bottom: 15px;
 }
@@ -1578,7 +1577,7 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    }
+}
 
 #iot-services {
     padding: 50px 0;
@@ -1664,7 +1663,8 @@ body {
         flex-direction: column;
         align-items: center;
     }
-        }
+}
+
 
 /*OTHER PAGES*/
 /*about us page*/
