@@ -721,10 +721,9 @@ body {
     }
 }
 
-
 #database-administration {
-    padding: 50px 0;
-    background-color: #f1f1f1;
+    padding: 60px 0;
+    background-color: #f9f9f9;
     color: #333;
 }
 
@@ -737,70 +736,118 @@ body {
 #database-administration h2 {
     text-align: center;
     font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #007BFF;
+    margin-bottom: 30px;
+    color: #0066cc;
+    font-weight: 700;
 }
 
 #database-administration p {
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 1.1em;
-    line-height: 1.6;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
 }
 
-.services {
+.db-services {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.service {
+.db-service {
     background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 100%;
-    max-width: 300px;
-    margin: 15px;
+    flex-basis: calc(33.333% - 20px); /* 3 columns layout */
+    max-width: calc(33.333% - 20px);
     text-align: center;
-}
-
-.service-icon {
-    width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 400px;
-    margin-bottom: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.service h3 {
-    font-size: 1.8em;
+.db-service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.db-service-icon {
+    width: 100%;
+    height: 200px; 
     margin-bottom: 15px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.db-service-content {
+    overflow-y: auto;
+    padding-right: 10px; 
+}
+
+.db-service h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
     color: #333;
+    font-weight: 600;
 }
 
-.service p {
-    margin-bottom: 15px;
+.db-service p {
+    margin-bottom: 10px;
     font-size: 1.1em;
+    color: #666;
 }
 
-.service ul {
+.db-service ul {
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: left;
-    font-size: 1.1em;
+    font-size: 1em;
+    color: #555;
 }
 
-.service ul li {
-    margin: 10px 0;
+.db-service ul li {
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.db-service ul li:before {
+    content: "\2022";
+    color: #007BFF;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@media (max-width: 1024px) {
+    .db-service {
+        flex-basis: calc(50% - 20px); /* Switch to 2 columns on tablets */
+        max-width: calc(50% - 20px);
+    }
 }
 
 @media (max-width: 768px) {
-    .services {
+    .db-services {
         flex-direction: column;
         align-items: center;
     }
+
+    .db-service {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
 }
+
 
 #cybersecurity {
     padding: 50px 0;
