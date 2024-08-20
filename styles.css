@@ -531,11 +531,12 @@ body {
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    flex-basis: calc(33.333% - 20px); /* 3 columns layout */
+    padding: 0; /* Remove padding to manage the layout */
+    flex-basis: calc(33.333% - 20px);
     max-width: calc(33.333% - 20px);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensure that content scrolls inside the box */
 }
 
 .service:hover {
@@ -543,11 +544,17 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.service-icon {
-    width: 200px;  /* Slight padding from the sides */
-    height: 200px;
-    margin-bottom: 20px;
-    border-radius: 10px;
+.service-image {
+    width: 100%;
+    height: 50%;
+    object-fit: cover; /* Adjust the image to cover its space */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.service .content {
+    padding: 20px;
+    height: 50%;
+    overflow-y: auto; /* Enable scrolling for text content */
 }
 
 .service h3 {
@@ -589,7 +596,7 @@ body {
 
 @media (max-width: 1024px) {
     .service {
-        flex-basis: calc(50% - 20px); /* Switch to 2 columns on tablets */
+        flex-basis: calc(50% - 20px); 
         max-width: calc(50% - 20px);
     }
 }
@@ -606,6 +613,7 @@ body {
         margin-bottom: 30px;
     }
 }
+
 
 #system-administration {
     padding: 50px 0;
