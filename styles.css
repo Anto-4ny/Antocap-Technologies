@@ -652,7 +652,7 @@ body {
     justify-content: space-between;
     height: 500px; /* Set a fixed height for uniformity */
     text-align: center;
-    overflow: hidden; /* Ensure contents don't spill out of the box */
+    overflow: hidden;
 }
 
 .service-image {
@@ -661,6 +661,13 @@ body {
     object-fit: cover;
     border-radius: 8px 8px 0 0;
     margin-bottom: 0; /* Ensure there's no gap below the image */
+}
+
+.service-content {
+    padding: 15px;
+    height: 50%;
+    overflow-y: auto; /* Enables scrolling for overflowing content */
+    flex-grow: 1;
 }
 
 .service h3 {
@@ -686,11 +693,6 @@ body {
     margin: 5px 0;
 }
 
-.service-content {
-    padding: 20px;
-    flex-grow: 1; /* Ensures the content section occupies the remaining space */
-}
-
 @media (max-width: 768px) {
     .services {
         flex-direction: column;
@@ -704,8 +706,13 @@ body {
     .service-image {
         height: auto; /* Ensure image adjusts naturally */
     }
+
+    .service-content {
+        height: auto; /* Adjust text section height for small screens */
+        overflow-y: visible; /* Remove scroll on small screens */
     }
-    
+}
+
 
 #database-administration {
     padding: 50px 0;
