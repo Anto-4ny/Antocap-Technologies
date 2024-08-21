@@ -229,6 +229,7 @@ body {
     margin-bottom: 40px;
     font-size: 1.1em;
     line-height: 1.6;
+    color: white;
 }
 
 .plans {
@@ -400,9 +401,11 @@ body {
 
 #software-development {
     padding: 50px 0;
-    background-color: #f9f9f9;
+    background: url('path/to/your-software-dev-background.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
     color: #333;
-}
+    }
 
 #software-development .container {
     max-width: 1200px;
