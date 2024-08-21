@@ -401,7 +401,7 @@ body {
 
 #software-development {
     padding: 50px 0;
-    background: url('path/to/your-software-dev-background.jpg') no-repeat center center;
+    background: url('scr/Featureimages/software development bg.jpg') no-repeat center center;
     background-size: cover;
     position: relative;
     color: #333;
@@ -538,13 +538,16 @@ body {
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    padding: 0; /* Remove padding to manage the layout */
-    flex-basis: calc(33.333% - 20px);
+    padding: 20px;
+    flex-basis: calc(33.333% - 20px); /* 3 columns layout */
     max-width: calc(33.333% - 20px);
-    height: 400px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Ensure that content scrolls inside the box */
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .service:hover {
@@ -658,18 +661,19 @@ body {
 
 .service {
     background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    margin: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex-basis: calc(33.333% - 20px); /* 3 columns layout */
+    max-width: calc(33.333% - 20px);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 500px; /* Set a fixed height for uniformity */
-    text-align: center;
-    overflow: hidden;
 }
 
 .service-image {
@@ -717,7 +721,9 @@ body {
     }
 
     .service {
-        height: auto; /* Allow dynamic height on smaller screens */
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
     }
 
     .service-image {
@@ -900,12 +906,13 @@ body {
     padding: 20px;
     flex-basis: calc(33.333% - 20px); /* 3 columns layout */
     max-width: calc(33.333% - 20px);
-    height: 400px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .service:hover {
@@ -1015,15 +1022,19 @@ body {
 
 .service {
     background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 100%;
-    height: 400px;
-    max-width: 300px;
+    flex-basis: calc(33.333% - 20px); /* 3 columns layout */
+    max-width: calc(33.333% - 20px);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .service:hover {
@@ -1115,15 +1126,19 @@ body {
 
 .service {
     background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 100%;
-    max-width: 300px;
-    height: 400px;
-    margin: 15px;
+    flex-basis: calc(33.333% - 20px); /* 3 columns layout */
+    max-width: calc(33.333% - 20px);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .service-icon {
@@ -1198,15 +1213,19 @@ body {
 
 .service {
     background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 100%;
-    max-width: 300px;
-    margin: 15px;
+    flex-basis: calc(33.333% - 20px); /* 3 columns layout */
+    max-width: calc(33.333% - 20px);
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .service:hover {
@@ -1283,16 +1302,20 @@ body {
 }
 
 .service {
-    background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 100%;
-    max-width: 280px; /* Slightly narrower width */
-    margin: 15px;
+    flex-basis: calc(33.333% - 20px); /* 3 columns layout */
+    max-width: calc(33.333% - 20px);
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .service:hover {
