@@ -538,6 +538,7 @@ body {
     padding: 0; /* Remove padding to manage the layout */
     flex-basis: calc(33.333% - 20px);
     max-width: calc(33.333% - 20px);
+    height: 400px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden; /* Ensure that content scrolls inside the box */
@@ -550,9 +551,10 @@ body {
 
 .service-image {
     width: 100%;
-    height: 50%;
-    object-fit: cover; /* Adjust the image to cover its space */
-    border-bottom: 1px solid #e0e0e0;
+    height: 250px; 
+    margin-bottom: 15px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .service .content {
@@ -657,7 +659,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     margin: 15px;
     display: flex;
     flex-direction: column;
@@ -669,10 +671,10 @@ body {
 
 .service-image {
     width: 100%;
-    height: 50%;
+    height: 250px; 
+    margin-bottom: 15px;
     object-fit: cover;
-    border-radius: 8px 8px 0 0;
-    margin-bottom: 0; /* Ensure there's no gap below the image */
+    border-radius: 10px;
 }
 
 .service-content {
@@ -784,7 +786,7 @@ body {
 
 .db-service-icon {
     width: 100%;
-    height: 200px; 
+    height: 250px; 
     margin-bottom: 15px;
     object-fit: cover;
     border-radius: 10px;
@@ -895,6 +897,7 @@ body {
     padding: 20px;
     flex-basis: calc(33.333% - 20px); /* 3 columns layout */
     max-width: calc(33.333% - 20px);
+    height: 400px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
@@ -908,11 +911,11 @@ body {
 }
 
 .service-img {
-    width: 100%; /* Fit the width of the container */
-    height: 200px;
-    object-fit: cover; /* Maintain aspect ratio */
-    margin-bottom: 20px;
-    border-radius: 10px;
+    width: 100%;
+    height: 250px; 
+    margin-bottom: 15px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .service h3 {
@@ -1014,6 +1017,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
+    height: 400px;
     max-width: 300px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1025,10 +1029,11 @@ body {
 }
 
 .service-image {
-    width: 200px; /* Adjusted width for better fit */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: 250px; 
     margin-bottom: 15px;
-    border-radius: 8px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .service h3 {
@@ -1113,14 +1118,17 @@ body {
     padding: 20px;
     width: 100%;
     max-width: 300px;
+    height: 400px;
     margin: 15px;
     text-align: center;
 }
 
 .service-icon {
-    width: 150px; /* Adjusted size */
-    height: 150px;
+    width: 100%;
+    height: 250px; 
     margin-bottom: 15px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .service h3 {
