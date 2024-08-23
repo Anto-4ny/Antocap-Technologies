@@ -172,6 +172,31 @@ document.addEventListener('click', function(event) {
 // Attach event listeners
 document.querySelector('.search-bar button').addEventListener('click', handleSearch);
 
+let currentSlide = 0;
+const slides = document.querySelectorAll('.banner-slide');
+const smallImages = document.querySelectorAll('.small-images');
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        smallImages[i].style.opacity = 0; // Reset small images
+        if (i === index) {
+            slide.classList.add('active');
+            setTimeout(() => {
+                smallImages[i].style.opacity = 1; // Show small images after a delay
+            }, 500); // Adjust timing as needed
+        }
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 5000); // Adjust the interval as needed
+
+
 // Simple sliding functionality for reviews
 const reviewsSlider = document.querySelector('.reviews-slider');
 let isDown = false;
