@@ -95,131 +95,70 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
         });
 });
 
-// Array of suggestions
-const suggestionsList = [
-    { name: "Web Development", href: "#web-development" },
-    { name: "Software Development", href: "#software-development" },
-    { name: "Network Administration", href: "#network-administration" },
-    { name: "System Administration", href: "#system-administration" },
-    { name: "Database Administration", href: "#database-administration" },
-    { name: "Cybersecurity", href: "#cybersecurity" },
-    { name: "Cloud Computing", href: "#cloud-computing" },
-    { name: "IT Support", href: "#it-support" },
-    { name: "Data Analysis", href: "#data-analysis" },
-    { name: "IT Consulting", href: "#it-consulting" },
-    { name: "Project Management", href: "#project-management" },
-    { name: "Quality Assurance", href: "#quality-assurance" },
-    { name: "Digital Marketing", href: "#digital-marketing" },
-    { name: "IT Training", href: "#it-training" },
-    { name: "IoT Services", href: "#iot-services" }
-];
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize the first slide as active
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.banner-slide');
 
-// Function to show suggestions as user types
-function showSuggestions() {
-    const input = document.getElementById('search').value.toLowerCase();
-    const suggestionsContainer = document.getElementById('suggestions');
-    suggestionsContainer.innerHTML = ''; // Clear previous suggestions
+    // Function to switch to the next slide
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
 
-    if (input) {
-        const filteredSuggestions = suggestionsList.filter(service =>
-            service.name.toLowerCase().includes(input)
-        );
+    // Auto-switch slides every 5 seconds
+    setInterval(nextSlide, 5000);
 
-        if (filteredSuggestions.length > 0) {
-            filteredSuggestions.forEach(service => {
-                const li = document.createElement('li');
-                const a = document.createElement('a');
-                a.href = service.href;
-                a.textContent = service.name;
-                li.appendChild(a);
-                suggestionsContainer.appendChild(li);
-            });
-            suggestionsContainer.style.display = 'block'; // Show suggestions
+    // Typing effect for banner text
+    const bannerText = document.querySelector('.banner-content h1');
+    let typingIndex = 0;
+    const typingSpeed = 100;
+
+    function typeBannerText() {
+        if (typingIndex < bannerText.textContent.length) {
+            bannerText.innerHTML += bannerText.textContent.charAt(typingIndex);
+            typingIndex++;
+            setTimeout(typeBannerText, typingSpeed);
         } else {
-            const li = document.createElement('li');
-            li.textContent = 'No matching services found';
-            li.style.color = 'red';
-            suggestionsContainer.appendChild(li);
-            suggestionsContainer.style.display = 'block'; // Show "not found" message
-        }
-    } else {
-        suggestionsContainer.style.display = 'none'; // Hide suggestions if input is empty
-    }
-}
-
-// Function to handle search button click
-function handleSearch() {
-    const input = document.getElementById('search').value.toLowerCase();
-    const matchingService = suggestionsList.find(service =>
-        service.name.toLowerCase() === input
-    );
-
-    if (matchingService) {
-        window.location.href = matchingService.href; // Redirect to the matched service
-    } else {
-        alert('Service not found.'); // Show alert if no match is found
-    }
-}
-
-// Optional: Hide suggestions when clicking outside the search bar
-document.addEventListener('click', function(event) {
-    const suggestionsContainer = document.getElementById('suggestions');
-    if (!event.target.closest('.search-bar')) {
-        suggestionsContainer.style.display = 'none';
-    }
-});
-
-// Attach event listeners
-document.querySelector('.search-bar button').addEventListener('click', handleSearch);
-
-let currentSlide = 0;
-const slides = document.querySelectorAll('.banner-slide');
-const smallImages = document.querySelectorAll('.small-images');
-
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        smallImages[i].style.opacity = 0; // Reset small images
-        if (i === index) {
-            slide.classList.add('active');
+            // Retype the text after a delay
             setTimeout(() => {
-                smallImages[i].style.opacity = 1; // Show small images after a delay
-            }, 500); // Adjust timing as needed
+                bannerText.innerHTML = '';
+                typingIndex = 0;
+                typeBannerText();
+            }, 5000); // Retype after 5 seconds
         }
-    });
-}
+    }
 
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}
+    // Initialize typing effect
+    bannerText.innerHTML = ''; // Clear text initially
+    typeBannerText();
 
-setInterval(nextSlide, 5000); // Adjust the interval as needed
+    // Function to show suggestions (example function)
+    function showSuggestions() {
+        const input = document.getElementById('search').value;
+        const suggestions = document.getElementById('suggestions');
+        suggestions.innerHTML = ''; // Clear previous suggestions
 
-const bannerHeading = document.querySelector('.banner h1');
-const searchBarInput = document.querySelector('.search-bar input[type="text"]');
+        if (input.length > 0) {
+            // Example suggestions (replace with dynamic data)
+            const exampleSuggestions = ['Software Development', 'Website Development', 'Network Management'];
+            exampleSuggestions.forEach(function(suggestion) {
+                if (suggestion.toLowerCase().includes(input.toLowerCase())) {
+                    const li = document.createElement('li');
+                    li.textContent = suggestion;
+                    li.addEventListener('click', function() {
+                        document.getElementById('search').value = suggestion;
+                        suggestions.innerHTML = ''; // Clear suggestions
+                    });
+                    suggestions.appendChild(li);
+                }
+            });
+        }
+    }
 
-function startTypingEffect() {
-    bannerHeading.style.maxWidth = '0';
-    searchBarInput.setAttribute('placeholder', '');
-    
-    // Restart typing animation
-    setTimeout(() => {
-        bannerHeading.style.maxWidth = '100%';
-        searchBarInput.setAttribute('placeholder', 'Search for Software development, Website development, Network management and more...');
-    }, 100);
-}
-
-function resetTypingEffect() {
-    setTimeout(() => {
-        startTypingEffect();
-    }, 8000); // Delay before restarting typing effect
-}
-
-startTypingEffect(); // Start the effect initially
-
-bannerHeading.addEventListener('animationend', resetTypingEffect);
-searchBarInput.addEventListener('animationend', resetTypingEffect);
+    window.showSuggestions = showSuggestions;
+});
 
 
 // Simple sliding functionality for reviews
