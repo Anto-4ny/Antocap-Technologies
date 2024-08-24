@@ -216,7 +216,7 @@ body {
     font-size: 36px;
     color: #fff;
     white-space: wrap;
-    overflow: hidden;
+    overflow-x: hidden;
     max-width: 0;
     margin: 0 auto;
     display: flex;
