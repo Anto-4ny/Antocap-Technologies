@@ -196,6 +196,31 @@ function nextSlide() {
 
 setInterval(nextSlide, 5000); // Adjust the interval as needed
 
+const bannerHeading = document.querySelector('.banner h1');
+const searchBarInput = document.querySelector('.search-bar input[type="text"]');
+
+function startTypingEffect() {
+    bannerHeading.style.maxWidth = '0';
+    searchBarInput.setAttribute('placeholder', '');
+    
+    // Restart typing animation
+    setTimeout(() => {
+        bannerHeading.style.maxWidth = '100%';
+        searchBarInput.setAttribute('placeholder', 'Search for Software development, Website development, Network management and more...');
+    }, 100);
+}
+
+function resetTypingEffect() {
+    setTimeout(() => {
+        startTypingEffect();
+    }, 8000); // Delay before restarting typing effect
+}
+
+startTypingEffect(); // Start the effect initially
+
+bannerHeading.addEventListener('animationend', resetTypingEffect);
+searchBarInput.addEventListener('animationend', resetTypingEffect);
+
 
 // Simple sliding functionality for reviews
 const reviewsSlider = document.querySelector('.reviews-slider');
