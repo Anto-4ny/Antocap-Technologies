@@ -185,13 +185,17 @@ body {
     margin-bottom: 20px;
     font-size: 24px;
     color: #fff;
-    animation: typing 5s steps(50, end), blink-caret 0.75s step-end infinite;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid;
     max-width: 0;
     margin: 0 auto;
     display: inline-block;
+    animation: typing 5s steps(50, end) 1 forwards, blink-caret 0.75s step-end infinite;
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: transparent;
+    animation: typing-placeholder 5s steps(50, end) 1 forwards;
 }
 
 @keyframes typing {
@@ -204,13 +208,22 @@ body {
     50% { border-color: #fff; }
 }
 
+@keyframes typing-placeholder {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
 /* Search Bar Styles */
 .search-bar {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+    animation: search-bar-typing 5s steps(50, end) 1 forwards;
 }
 
 .search-bar input[type="text"] {
