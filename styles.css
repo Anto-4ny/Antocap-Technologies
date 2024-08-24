@@ -91,7 +91,7 @@ body {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media(max-width: 768px) {
     .scrollable-nav-list li a {
         padding: 8px 15px;
         font-size: 14px;
@@ -131,6 +131,7 @@ body {
     overflow: hidden;
 }
 
+/* Handling Multiple Banner Slides */
 .banner-slider {
     position: absolute;
     width: 100%;
@@ -153,35 +154,60 @@ body {
     display: block;
 }
 
+/* Fade-in Animation */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
+/* Curved Small Images Layout */
 .small-images {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    right: 20px;
+    bottom: 20%;
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     gap: 15px;
-    opacity: 0;
-    animation: popIn 2s forwards;
-}
-
-@keyframes popIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+    animation: popInSequence 1s ease-out forwards;
 }
 
 .small-image {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 10px;
     background-size: cover;
     background-position: center;
+    opacity: 0;
+    transform: translateX(100px) rotate(0deg);
+    animation: popIn 0.5s ease-out forwards;
 }
 
-.banner h1 {
+/* Pop-in Animation for Small Images */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100px) rotate(15deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0);
+    }
+}
+
+/* Sequential Animation for Small Images */
+.small-image:nth-child(1) {
+    animation-delay: 0.5s;
+}
+.small-image:nth-child(2) {
+    animation-delay: 1.5s;
+}
+.small-image:nth-child(3) {
+    animation-delay: 2.5s;
+}
+
+/* Typing Effect for Banner Text */
+.banner-content h1 {
     margin-bottom: 20px;
     font-size: 24px;
     color: #fff;
@@ -190,44 +216,37 @@ body {
     max-width: 0;
     margin: 0 auto;
     display: inline-block;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
     animation: typing 5s steps(50, end) 1 forwards, blink-caret 0.75s step-end infinite;
 }
 
-.search-bar input[type="text"]::placeholder {
-    color: transparent;
-    animation: typing-placeholder 5s steps(50, end) 1 forwards;
-}
-
+/* Typing Effect Keyframes */
 @keyframes typing {
     from { max-width: 0; }
     to { max-width: 100%; }
 }
 
+/* Blinking Caret Keyframes */
 @keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: #fff; }
 }
 
-@keyframes typing-placeholder {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-/* Search Bar Styles */
+/* Search Bar Styling */
 .search-bar {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    width: 60%;
     animation: search-bar-typing 5s steps(50, end) 1 forwards;
 }
 
 .search-bar input[type="text"] {
-    width: 60%;
+    width: 100%;
     padding: 10px;
     font-size: 16px;
     border: none;
@@ -249,85 +268,27 @@ body {
     background-color: #d87b1a;
 }
 
-.suggestions {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-top: none;
-    z-index: 1000;
-    max-height: 150px;
-    overflow-y: auto;
-}
-
-.suggestions li {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.suggestions li:hover {
-    background-color: #f0f0f0;
-    }
 /* Responsive Banner Section */
-.banner {
-    height: 50vh; /* Adjusted for better responsiveness */
-    padding: 10px;
-}
-
-.banner-content {
-    max-width: 90%;
-    width: 100%;
-}
-
-/* Typing effect font size adjustment */
-.banner h1 {
-    font-size: 18px; /* Smaller font size for small screens */
-}
-
-.search-bar input[type="text"] {
-    width: 80%;
-    font-size: 14px;
-}
-
-.search-bar button {
-    padding: 8px 16px;
-    font-size: 14px;
-}
-
-/* Responsive Small Images */
-.small-image {
-    width: 60px;
-    height: 60px;
-}
-
-/* Responsive Styles */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .banner {
-        height: 60vh;
+        height: 50vh;
     }
 
-    .banner h1 {
-        font-size: 22px;
+    .banner-content h1 {
+        font-size: 18px;
     }
 
     .search-bar input[type="text"] {
-        width: 70%;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .search-bar button {
-        padding: 10px 20px;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .small-image {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
     }
 }
 
@@ -336,25 +297,23 @@ body {
         height: 70vh;
     }
 
-    .banner h1 {
+    .banner-content h1 {
         font-size: 28px;
     }
 
     .search-bar input[type="text"] {
-        width: 60%;
         font-size: 18px;
     }
 
     .search-bar button {
         padding: 12px 24px;
-        font-size: 18px;
     }
 
     .small-image {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
-}
+        }
 
 
 .intro {
