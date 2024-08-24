@@ -33,7 +33,7 @@ registerButton.addEventListener('click', () => {
     loginButton.classList.remove('active');
 });
 
-// Show/hide password
+// Show/hide password functionality
 document.querySelectorAll('.toggle-password').forEach(item => {
     item.addEventListener('click', function () {
         const input = this.previousElementSibling;
@@ -95,11 +95,11 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
         });
 });
 
+// Sliding banner functionality
 document.addEventListener('DOMContentLoaded', function() {
-let currentSlide = 0;
+    let currentSlide = 0;
     const slides = document.querySelectorAll('.banner-slide');
 
-    // Function to switch to the next slide
     function nextSlide() {
         slides[currentSlide].classList.remove('active');
         currentSlide = (currentSlide + 1) % slides.length;
@@ -118,7 +118,6 @@ let currentSlide = 0;
             typingIndex++;
             setTimeout(typeBannerText, typingSpeed);
         } else {
-            // Retype the text after a delay
             setTimeout(() => {
                 bannerText.innerHTML = '';
                 typingIndex = 0;
@@ -127,7 +126,6 @@ let currentSlide = 0;
         }
     }
 
-    // Initialize typing effect
     bannerText.innerHTML = ''; // Clear text initially
     typeBannerText();
 
@@ -138,7 +136,6 @@ let currentSlide = 0;
         suggestions.innerHTML = ''; // Clear previous suggestions
 
         if (input.length > 0) {
-            // Example suggestions (replace with dynamic data)
             const exampleSuggestions = ['Software Development', 'Website Development', 'Network Management'];
             exampleSuggestions.forEach(function(suggestion) {
                 if (suggestion.toLowerCase().includes(input.toLowerCase())) {
@@ -157,8 +154,7 @@ let currentSlide = 0;
     window.showSuggestions = showSuggestions;
 });
 
-
-// Simple sliding functionality for reviews
+// Sliding functionality for reviews
 const reviewsSlider = document.querySelector('.reviews-slider');
 let isDown = false;
 let startX;
@@ -182,11 +178,11 @@ reviewsSlider.addEventListener('mousemove', (e) => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - reviewsSlider.offsetLeft;
-    const walk = (x - startX) * 3; //scroll-fast
+    const walk = (x - startX) * 3; // Scroll speed multiplier
     reviewsSlider.scrollLeft = scrollLeft - walk;
 });
 
-// Contact us page functionality
+// Contact form functionality
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('contact-form');
 
@@ -217,4 +213,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-        
+              
