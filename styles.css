@@ -168,7 +168,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 15px;
+    gap: 55px;
     animation: popInSequence 1s ease-out forwards;
 }
 
@@ -180,7 +180,7 @@ body {
     background-position: center;
     opacity: 0;
     transform: translateX(100px) rotate(0deg);
-    animation: popIn 0.5s ease-out forwards;
+    animation: popIn 1.0s ease-out forwards;
 }
 
 /* Pop-in Animation for Small Images */
@@ -208,14 +208,17 @@ body {
 
 /* Typing Effect for Banner Text */
 .banner-content h1 {
-    margin-bottom: 20px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    margin-bottom: 5px;
     font-size: 24px;
     color: #fff;
     white-space: nowrap;
     overflow: hidden;
     max-width: 0;
     margin: 0 auto;
-    display: inline-block;
+    display: flex;
     border-right: 2px solid rgba(255, 255, 255, 0.75);
     animation: typing 5s steps(50, end) 1 forwards, blink-caret 0.75s step-end infinite;
 }
