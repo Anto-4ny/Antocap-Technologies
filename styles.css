@@ -117,12 +117,11 @@ body {
         height: 40px;
     }
 }
-
 /* Search Bar Styling */
 .search-bar {
     position: relative;
     top: 80px;
-    left: 30%;
+    left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
@@ -130,9 +129,24 @@ body {
     width: 60%;
     margin-top: 20px;  /* Space above the search bar */
     margin-bottom: 20px; /* Space below the search bar */
-    animation: search-bar-typing 5s steps(50, end) 1 forwards;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: searchBarPopIn 1s ease-out forwards;
+    animation-delay: 1s; /* Adjust delay to time it with other animations */
 }
 
+@keyframes searchBarPopIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Rest of the Search Bar Styles */
 .search-bar input[type="text"] {
     width: 100%;
     padding: 10px;
@@ -176,7 +190,6 @@ body {
         padding: 12px 24px;
     }
 }
-
 /* Banner Section */
 .banner {
     position: relative;
