@@ -121,8 +121,7 @@ body {
 .search-bar {
     position: relative;
     top: 80px;
-    left: 50%;
-    right: 50%;
+    left: 30%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
