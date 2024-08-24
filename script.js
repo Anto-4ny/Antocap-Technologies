@@ -96,8 +96,7 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize the first slide as active
-    let currentSlide = 0;
+let currentSlide = 0;
     const slides = document.querySelectorAll('.banner-slide');
 
     // Function to switch to the next slide
@@ -106,8 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSlide = (currentSlide + 1) % slides.length;
         slides[currentSlide].classList.add('active');
     }
-
-    // Auto-switch slides every 5 seconds
     setInterval(nextSlide, 5000);
 
     // Typing effect for banner text
