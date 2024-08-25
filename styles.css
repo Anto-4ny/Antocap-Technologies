@@ -602,14 +602,9 @@ body {
     color: #333;
 }
 
-.plan {
+.plan .price {
     font-size: 2em;
     color: #007BFF;
-    margin-bottom: 20px;
-}
-.price {
-    font-size: 2em;
-    color: gold;
     margin-bottom: 20px;
 }
 
