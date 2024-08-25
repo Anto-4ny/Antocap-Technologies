@@ -409,7 +409,7 @@ body {
 
 .price {
     font-size: 1.5em;
-    color: #d32f2f; /* Distinctive color for price */
+    color: gold; /* Distinctive color for price */
     margin-bottom: 20px;
 }
 
