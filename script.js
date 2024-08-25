@@ -213,4 +213,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+
+function redirectToContactUs() {
+    window.location.href = "contact-us.html";
+    }
+        
               
