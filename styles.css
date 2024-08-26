@@ -5,7 +5,6 @@ body {
     box-sizing: border-box;
     overflow-x: hidden; /* Prevent horizontal overflow on the body */
 }
-
 .container, .top-bar, .banner, .scrollable-nav-container {
     max-width: 100%; /* Ensure these elements don’t cause overflow */
     overflow-x: hidden;
@@ -22,10 +21,7 @@ body {
     z-index: 1000;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: popIn 1s ease-out forwards;
+    align-items: right;
 }
 
 /* Top Links */
@@ -33,11 +29,28 @@ body {
     color: white;
     text-decoration: none;
     margin: 0 10px;
+    opacity: 0;
+    transform: translateX(50px); /* Start position: 50px to the right */
+    animation: popInRight 1s ease-out forwards;
 }
 
+/* Hover Effect */
 .top-links a:hover, .account-links a:hover {
     color: #ff6a00;
 }
+
+/* Pop-in Animation from Right to Left */
+@keyframes popInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px); /* 50px to the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Normal position */
+    }
+}
+
 
 /* Scrollable Navigation Container */
 .scrollable-nav-container {
