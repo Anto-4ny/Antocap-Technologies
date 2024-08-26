@@ -346,6 +346,27 @@ body {
     background-color: #f4f4f4;
 }
 
+.services-heading {
+    text-align: center;
+    color: #4B0082; /* Unique color, indigo */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: popInHeading 1.5s ease-out forwards;
+}
+
+/* Pop-in Animation */
+@keyframes popInHeading {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 #web-development {
     padding: 50px 0;
     background-color: #f5f5f5; /* Fallback light background color */
