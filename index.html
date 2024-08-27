@@ -1035,25 +1035,24 @@
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const popIns = document.querySelectorAll('.pop-in');
-
-            const popInObserver = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        popInObserver.unobserve(entry.target); // Stop observing once the animation is triggered
-                    }
-                });
-            }, {
-                threshold: 0.1 // Trigger when 10% of the element is visible
-            });
-
-            popIns.forEach(popIn => {
-                popInObserver.observe(popIn);
-            });
+    // Pop-in effect functionality
+    const popIns = document.querySelectorAll('.pop-in');
+    const popInObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                popInObserver.unobserve(entry.target); // Stop observing once the animation is triggered
+            }
         });
-        // Sliding banner functionality
-document.addEventListener('DOMContentLoaded', function() {
+    }, {
+        threshold: 0.1 // Trigger when 10% of the element is visible
+    });
+
+    popIns.forEach(popIn => {
+        popInObserver.observe(popIn);
+    });
+
+    // Sliding banner functionality
     let currentSlide = 0;
     const slides = document.querySelectorAll('.banner-slide');
 
@@ -1109,36 +1108,36 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.showSuggestions = showSuggestions;
-});
 
-// Sliding functionality for reviews
-const reviewsSlider = document.querySelector('.reviews-slider');
-let isDown = false;
-let startX;
-let scrollLeft;
+    // Sliding functionality for reviews
+    const reviewsSlider = document.querySelector('.reviews-slider');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-reviewsSlider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX - reviewsSlider.offsetLeft;
-    scrollLeft = reviewsSlider.scrollLeft;
-});
+    reviewsSlider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - reviewsSlider.offsetLeft;
+        scrollLeft = reviewsSlider.scrollLeft;
+    });
 
-reviewsSlider.addEventListener('mouseleave', () => {
-    isDown = false;
-});
+    reviewsSlider.addEventListener('mouseleave', () => {
+        isDown = false;
+    });
 
-reviewsSlider.addEventListener('mouseup', () => {
-    isDown = false;
-});
+    reviewsSlider.addEventListener('mouseup', () => {
+        isDown = false;
+    });
 
-reviewsSlider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - reviewsSlider.offsetLeft;
-    const walk = (x - startX) * 3; // Scroll speed multiplier
-    reviewsSlider.scrollLeft = scrollLeft - walk;
+    reviewsSlider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - reviewsSlider.offsetLeft;
+        const walk = (x - startX) * 3; // Scroll speed multiplier
+        reviewsSlider.scrollLeft = scrollLeft - walk;
+    });
 });
-                    </script>
+            </script>
 </body>
 </html>
                         
