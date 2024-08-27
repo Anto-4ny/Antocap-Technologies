@@ -271,6 +271,7 @@ body {
 
 .carousel-item {
   flex: 0 0 100%;
+  text-align: center;
 }
 
 .carousel-item img {
@@ -278,15 +279,35 @@ body {
   object-fit: cover;
 }
 
+.offer-details {
+  margin-top: 15px;
+}
+
+.offer-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.get-started-btn {
+  background-color: #007bff; /* Blue color */
+  border-color: #007bff;
+  color: #fff;
+}
+
+.get-started-btn:hover {
+  background-color: #0056b3; /* Darker blue color for hover effect */
+  border-color: #004085;
+}
+
 .modal-dialog {
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .modal-content {
   background: #fff;
 }
-
-
 
 /* Banner Section */
 .banner {
