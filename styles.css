@@ -248,6 +248,46 @@ body {
         padding: 12px 24px;
     }
 }
+
+.offer-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(30, end) 1s 1 normal both;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.carousel-inner {
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+}
+
+.carousel-item img {
+  max-height: 400px; /* Adjust height as needed */
+  object-fit: cover;
+}
+
+.modal-dialog {
+  max-width: 90%;
+}
+
+.modal-content {
+  background: #fff;
+}
+
+
+
 /* Banner Section */
 .banner {
     position: relative;
