@@ -616,7 +616,7 @@ content: '← Scroll →';
 
 #website-showcase p {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     font-size: 1.1em;
     line-height: 1.6;
 }
@@ -627,7 +627,7 @@ content: '← Scroll →';
     overflow-x: auto;
     scroll-behavior: smooth;
     padding-bottom: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     white-space: nowrap; /* Ensure that items don't wrap to the next line */
 }
 
@@ -636,10 +636,10 @@ content: '← Scroll →';
     display: none;
 }
 
-/*Custom scrollbar styles (optional, uncomment to use)*/
+/*Custom scrollbar styles (optional, uncomment to use)
 .showcase {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  IE and Edge
+    scrollbar-width: none;  Firefox */
 }
 
 /* Style for each project */
