@@ -1033,6 +1033,26 @@
     </div>
     </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const popIns = document.querySelectorAll('.pop-in');
+
+            const popInObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        popInObserver.unobserve(entry.target); // Stop observing once the animation is triggered
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            });
+
+            popIns.forEach(popIn => {
+                popInObserver.observe(popIn);
+            });
+        });
+                    </script>
 </body>
 </html>
                         
