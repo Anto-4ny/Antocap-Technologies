@@ -628,6 +628,7 @@ content: '← Scroll →';
     scroll-behavior: smooth;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    white-space: nowrap; /* Ensure that items don't wrap to the next line */
 }
 
 /* Hide the default scrollbar */
@@ -635,7 +636,7 @@ content: '← Scroll →';
     display: none;
 }
 
-/* Show a custom scrollbar */
+/*Custom scrollbar styles (optional, uncomment to use)*/
 .showcase {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
@@ -652,8 +653,9 @@ content: '← Scroll →';
     max-width: 280px;
     text-align: center;
     overflow: hidden;
-    flex: 0 0 auto; /* Make each project flex item unshrinkable */
+    flex: 0 0 auto; /* Make each project a fixed-size item */
     transition: transform 0.3s, box-shadow 0.3s;
+    white-space: normal; /* Ensure that text wraps within each project */
 }
 
 .project:hover {
@@ -713,18 +715,21 @@ content: '← Scroll →';
     border-radius: 10px;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for all screen sizes, including mobile */
 @media (max-width: 768px) {
     .showcase {
-        flex-direction: column;
-        align-items: center;
-        overflow-x: visible;
+        padding: 0 10px 10px 10px; /* Adjust padding for smaller screens */
     }
-    
+
+    .project {
+        max-width: 250px; /* Adjust project width for smaller screens */
+    }
+
     .showcase::after {
-        content: ''; /* Hide scroll indication on small screens */
+        content: ''; /* Hide scroll indication if needed */
     }
 }
+
 
 
 
