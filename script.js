@@ -16,3 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(element);
     });
 });
+
+
+$(document).ready(function() {
+  // Show modal on page load
+  $('#offersModal').modal('show');
+  
+  // Start carousel auto-scroll
+  $('#offersCarousel').carousel({
+    interval: 3000 // Adjust scroll interval as needed
+  });
+});
