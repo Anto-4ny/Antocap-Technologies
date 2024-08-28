@@ -28,11 +28,9 @@
             <a href="login.html">Sign Up</a>
         </div>
         <div class="hamburger-menu">
-            <span><a href="index.html">Home</a> </span>
-            <span><a href="services-heading">Our Services</a></span>
-            <span><a href="about us.html">About Us</a></span>
-            <span><a href="contact-us.html">Contact Us</a></span>
-            <span><a href="login.html">Sign Up</a></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
         </div>
@@ -1113,7 +1111,7 @@ Learn More </p>
     </div>
     </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+   document.addEventListener("DOMContentLoaded", function() {
     // Pop-in effect functionality
     const popIns = document.querySelectorAll('.pop-in');
     const popInObserver = new IntersectionObserver(entries => {
@@ -1217,18 +1215,25 @@ Learn More </p>
         const walk = (x - startX) * 3; // Scroll speed multiplier
         reviewsSlider.scrollLeft = scrollLeft - walk;
     });
+
+    // Hamburger menu functionality
+    document.querySelector('.hamburger-menu').addEventListener('click', function() {
+        this.classList.toggle('active');
+        document.querySelector('.top-links').classList.toggle('active');
+    });
+
+    // Modal popup functionality
+    $(document).ready(function() {
+        // Show modal on page load
+        $('#offersModal').modal('show');
+        
+        // Start carousel auto-scroll
+        $('#offersCarousel').carousel({
+            interval: 3000 // Adjust scroll interval as needed
+        });
+    });
 });
-//pop -ups
-        $(document).ready(function() {
-  // Show modal on page load
-  $('#offersModal').modal('show');
-  
-  // Start carousel auto-scroll
-  $('#offersCarousel').carousel({
-    interval: 3000 // Adjust scroll interval as needed
-  });
-});
-            </script>
+ </script>
 </body>
 </html>
                         
