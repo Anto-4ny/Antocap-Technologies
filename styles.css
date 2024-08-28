@@ -15,29 +15,98 @@ body {
     background: black;
     border-bottom: 1px solid #ddd;
     position: fixed;
-    width: 100%; /* Ensure the top bar spans the full width */
+    width: 100%;
     height: 90px;
     top: 0;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
-    align-items: right;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
 }
 
 /* Top Links */
-.top-links a, .account-links a {
+.top-links {
+    display: flex;
+    align-items: center;
+}
+
+.top-links a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
     opacity: 0;
-    transform: translateX(50px); /* Start position: 50px to the right */
+    transform: translateX(50px);
     animation: popInRight 1s ease-out forwards;
 }
 
 /* Hover Effect */
-.top-links a:hover, .account-links a:hover {
+.top-links a:hover {
     color: #ff6a00;
 }
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none; /* Hidden on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px;
+    transition: 0.4s;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .top-links {
+        display: none; /* Hide links on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        background: black;
+        width: 100%;
+        text-align: right;
+    }
+
+    .top-links a {
+        margin: 10px 20px;
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger on smaller screens */
+    }
+}
+
+/* Hamburger Menu Toggle */
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Show Menu when active */
+.hamburger-menu.active ~ .top-links {
+    display: flex;
+    }
+                      
 
 /* Pop-in Animation from Right to Left */
 @keyframes popInRight {
