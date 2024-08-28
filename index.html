@@ -1164,7 +1164,9 @@ Learn More </p>
         suggestions.innerHTML = ''; // Clear previous suggestions
 
         if (input.length > 0) {
-            const exampleSuggestions = ['Software Development', 'Website Development', 'Network Management'];
+            const exampleSuggestions = ['Software Development', 'Database Management', 'iot services', 'database setup', 'database configuration', 
+                                        'cyber security services', 'App Design', 'web design', 'network administration', 'network setup', 'It consulting',
+                                        'website showcase', 'cloud computing', 'Digital Marketing', 'Project Management', 'Website Development', 'Network Management'];
             exampleSuggestions.forEach(function(suggestion) {
                 if (suggestion.toLowerCase().includes(input.toLowerCase())) {
                     const li = document.createElement('li');
