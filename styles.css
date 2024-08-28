@@ -340,12 +340,12 @@ content: '← Scroll →';
 }
 
 .carousel-item {
-  flex: 0 0 50%;
+  flex: 0 0 100%;
   text-align: center;
 }
 
 .carousel-item img {
-  max-height: 350px; /* Adjust height as needed */
+  max-height: 400px; /* Adjust height as needed */
   object-fit: cover;
 }
 
