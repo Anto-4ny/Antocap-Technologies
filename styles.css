@@ -255,7 +255,7 @@ content: '← Scroll →';
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
-  white-space: nowrap;
+  white-space: wrap;
   overflow: hidden;
   animation: typing 2s steps(30, end) 1s 1 normal both;
 }
@@ -271,12 +271,12 @@ content: '← Scroll →';
 }
 
 .carousel-item {
-  flex: 0 0 100%;
+  flex: 0 0 50%;
   text-align: center;
 }
 
 .carousel-item img {
-  max-height: 400px; /* Adjust height as needed */
+  max-height: 350px; /* Adjust height as needed */
   object-fit: cover;
 }
 
