@@ -1,7 +1,3 @@
-document.querySelector('.hamburger-menu').addEventListener('click', function() {
-    this.classList.toggle('active');
-    document.querySelector('.top-links').classList.toggle('active');
-});
 
 //pop ins
 document.addEventListener('DOMContentLoaded', () => {
