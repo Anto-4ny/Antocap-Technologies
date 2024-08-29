@@ -51,6 +51,29 @@
           alert(`Error: ${error.message}`);
         });
     });
+// Inside the sign-up form submission handler
+const user = userCredential.user;
+const userRef = doc(db, "users", user.uid);
+
+const userData = {
+  email: user.email,
+  uid: user.uid,
+  createdAt: new Date(),
+  // Additional user info
+  displayName: "", // Add this field if users have display names
+  phoneNumber: "", // Add this field if users have phone numbers
+  status: "active", // For tracking user account status
+  profilePicture: "", // URL to the user's profile picture if you have one
+};
+
+setDoc(userRef, userData)
+  .then(() => {
+    alert('User information stored in Firestore!');
+  })
+  .catch((error) => {
+    alert(`Error storing user info: ${error.message}`);
+  });
+
 
     // Handle Login
     document.getElementById('login-form').addEventListener('submit', (event) => {
