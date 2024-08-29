@@ -9,7 +9,12 @@ body {
     max-width: 100%; /* Ensure these elements don’t cause overflow */
     overflow-x: hidden;
 }
-
+.favicon-icon {
+    width: 32px;
+    height: 32px;
+    background-image: url('path-to-your-favicon/favicon.png');
+    background-size: cover;
+}
 /* Top Bar */
 .top-bar {
     background: black;
