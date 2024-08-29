@@ -18,7 +18,320 @@
       align-items: center;
       height: 100vh;
       background-color: #f0f2f5;
+   overflow-x: hidden; /* Prevent horizontal overflow on the body */
+}
+.container, .top-bar, .scrollable-nav-container {
+    max-width: 100%; /* Ensure these elements don’t cause overflow */
+    overflow-x: hidden;
+}
+
+/* Top Bar */
+.top-bar {
+    background: black;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containeer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* Top Links */
+.top-links {
+    display: flex;
+    align-items: center;
+}
+
+.top-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: popInRight 1s ease-out forwards;
+}
+
+/* Hover Effect */
+.top-links a:hover {
+    color: #ff6a00;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none; /* Hidden on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px;
+    transition: 0.4s;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .top-links {
+        display: none; /* Hide links on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        background: black;
+        width: 100%;
+        text-align: right;
     }
+
+    .top-links a {
+        margin: 10px 20px;
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger on smaller screens */
+    }
+}
+
+/* Hamburger Menu Toggle */
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Show Menu when active */
+.hamburger-menu.active ~ .top-links {
+    display: flex;
+    }
+                      
+
+/* Pop-in Animation from Right to Left */
+@keyframes popInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px); /* 50px to the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Normal position */
+    }
+}
+
+/* Scrollable Navigation Container */
+.scrollable-nav-container { 
+content: '← Scroll →';
+    display: flex;
+    align-items: center;
+    overflow-x: auto; /* Only this container should scroll horizontally */
+    padding: 10px;
+    background-color: #f8f9fa;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: popIn 1.5s ease-out forwards;
+}
+
+/* Logo */
+.scrollable-logo img {
+    height: 50px;
+    margin-right: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: popIn 2s ease-out forwards;
+}
+
+/* Navigation Styles */
+.scrollable-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: popIn 2.5s ease-out forwards;
+}
+
+/* Navigation List */
+.scrollable-nav-list {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* List Items */
+.scrollable-nav-list li {
+    display: inline-block;
+    margin-right: 10px;
+    opacity: 0;
+    transform: translateX(-50px); /* Start from 50px to the left */
+    animation: popInLeft 3s ease-out forwards;
+}
+
+.scrollable-nav-list li a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s, color 0.3s;
+    opacity: 0;
+    transform: translateX(-50px); /* Start from 50px to the left */
+    animation: popInLeft 3.5s ease-out forwards;
+}
+
+/* Hover Effect for List Items */
+.scrollable-nav-list li a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Pop-in Animation from Down to Up */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pop-in Animation from Left to Right */
+@keyframes popInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px); /* 50px to the left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Normal position */
+    }
+}
+
+/* Responsive Adjustments */
+@media(max-width: 768px) {
+    .scrollable-nav-list li a {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+
+    .scrollable-logo img {
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scrollable-nav-list {
+        justify-content: flex-start;
+    }
+
+    .scrollable-nav-list li a {
+        padding: 6px 10px;
+        font-size: 16px;
+    }
+
+    .scrollable-logo img {
+        height: 40px;
+    }
+}
+
+
+/* Search Bar Styling */
+.search-bar {
+    position: relative;
+    top: 80px;
+    left: 30%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin-top: 20px;  /* Space above the search bar */
+    margin-bottom: 20px; /* Space below the search bar */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: searchBarPopIn 1s ease-out forwards;
+    animation-delay: 1s; /* Adjust delay to time it with other animations */
+}
+
+@keyframes searchBarPopIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Rest of the Search Bar Styles */
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #d87b1a;
+}
+
+/* Responsive Search Bar */
+@media (max-width: 768px) {
+    .search-bar input[type="text"] {
+        font-size: 14px;
+    }
+
+    .search-bar button {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .search-bar input[type="text"] {
+        font-size: 18px;
+    }
+
+    .search-bar button {
+        padding: 12px 24px;
+    }
+}
 
     .auth-container {
       background-color: #fff;
