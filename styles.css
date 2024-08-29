@@ -2330,13 +2330,7 @@ h1, h2 {
         width: 80%;
     }
     }
- bodie {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f0f2f5;
-    }
+/*Registration form*/
     * {
       box-sizing: border-box;
       margin: 0;
